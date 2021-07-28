@@ -116,9 +116,22 @@ body {
     text-shadow: 1px 1px #ddd;
 }
 
-
-.input-button:hover img{
+@keyframes rotate {
+    0% {
+    transform: rotate(0deg);
+    }
+    50% {
+    transform: rotate(-180deg);
+    }
+    100% {
     transform: rotate(-360deg);
+    }
+}
+
+.input-button:hover img {
+    animation: rotate 1s ease;
+    border: 2px solid #FFF;
+    border-radius: 50%;
 }
 
 .input-login p {
