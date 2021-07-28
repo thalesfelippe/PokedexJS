@@ -53,6 +53,12 @@ body {
     align-items: center;
 }
 
+.input-bar input:focus {
+    border-top: 2px solid #2D9CDB;
+    border-right: 2px solid #2D9CDB;
+    border-bottom: 2px solid #2D9CDB;
+}
+
 .rightside label {
     display: block;
     color: #FFF;
@@ -83,6 +89,7 @@ body {
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+    cursor: pointer;
 }
 
 .input-button img {
@@ -91,10 +98,37 @@ body {
     transition: transform .7s ease-in-out;
 }
 
+.input-button input {
+    display: inline-block;
+    border-radius: 15px;
+    border: 1px solid #333;
+    color: #33363A;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all .3s;
+}
+
+.input-button:hover input {
+    background-color: #FF9C0D;
+    color: #33363A;
+    box-shadow: 2px 2px 3px #FFD00B;
+    text-shadow: 1px 1px #ddd;
+}
+
+
 .input-button:hover img{
     transform: rotate(-360deg);
 }
 
-.input-button input {
-    border-radius: 8px;
+.input-login p {
+    color: #FFF;
+    text-shadow: 1px 1px #222;
+}
+
+.input-login a {
+    color: #1773db;
+    text-shadow: 1px 1px #333;
+    text-decoration: none;
+    font-weight: bold;
 }
