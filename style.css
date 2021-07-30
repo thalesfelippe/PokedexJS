@@ -9,121 +9,9 @@ body {
     margin: 0;
 }
 
-.screen {
-    display: flex;
-    height: 100vh;
-}
-
-.leftside {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 254, 254);
-    border-right: 1px solid #000;
-}
-
-.leftside img {
-    max-width: 500px;
-    height: auto;
-}
-
-.rightside {
-    width: 400px;
-    background-color: #63a37f;
-    padding: 50px;
-    border-left: 2px solid #2D9CDB;
-}
-
-.rightside h1 {
-    color: #FFF;
-    text-shadow: 1px 2px #000;
-    font-weight: bold;
-    text-align: center;
-}
-
-.rightside img {
-    display: flex;
-    width: 150px;
-    margin: auto;
-}
-
-/* .input-bar {
-    display: flex;
-    align-items: center;
-} */
-
-.rightside label {
-    display: block;
-    color: #FFF;
-    text-shadow: 1px 1px #222;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-/* .rightside .input-bar img {
-    display: inline-block !important;
-    margin-left: -10px !important;
-    width: 20px !important;
-    z-index: 99 !important;
-} */
-
-.rightside input {
-    width: 100%;
-    border: 1px solid #999;
-    box-shadow: 1px 1px #333;
-    border-radius: 5px;
-    padding: 8px;
-    font-size: 14px;
-    outline: 0;
-    margin-left: -5px;
-}
-
-.rightside input:focus {
-    border-top: 2px solid #2D9CDB;
-    border-right: 2px solid #2D9CDB;
-    border-left: 2px solid #2D9CDB;
-    border-bottom: 2px solid #2D9CDB;
-}
-
-.input-button {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    cursor: pointer;
-}
-
-.input-button img {
-    margin-left: -35px !important;
-    width: 30px !important;
-    transition: transform .7s ease-in-out;
-}
-
-.input-button input {
-    display: inline-block;
-    border-radius: 15px;
-    border: 1px solid #333;
-    color: #33363A;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: bold;
-    transition: all .3s;
-}
-
-.input-button:hover input {
-    background-color: #FF9C0D;
-    color: #33363A;
-    text-shadow: 1px 1px #ddd;
-    box-shadow: 2px 2px 3px #FFD00B;
-}
-
-.input-button:active input {
-    background-color: #00FA6D;
-    color: #FFF;
-    text-shadow: 2px 2px #333;
-    box-shadow: 2px 2px 3px #0A734C;
-}
+/********************************
+Animation
+*********************************/
 
 @keyframes rotate {
     0% {
@@ -149,16 +37,336 @@ body {
     }
 }
 
-.input-button:hover img {
+@keyframes rotate-load {
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes slideleft {
+    0%{
+        transform:translateX(0px);
+    }
+    25%{
+        transform:translateX(85px);
+    }
+    50%{
+        transform:translateX(0px);
+    }
+    100%{
+
+    }
+}
+
+@keyframes slideright {
+    0%{
+        transform:translateX(0px);
+    }
+    25%{
+        transform:translateX(-85px);
+    }
+    50%{
+        transform:translateX(0px);
+    }
+    100%{
+        
+    }
+}
+/********************************
+Animation
+*********************************/
+
+.screen {
+    display: flex;
+    height: 100vh;
+}
+
+/********************************
+Poke-Slider
+*********************************/
+
+.leftside {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 254, 254);
+    border-right: 1px solid #000;
+}
+
+.leftside img {
+    max-width: 500px;
+    height: auto;
+}
+
+/********************************
+Poke-Slider
+*********************************/
+
+/********************************
+Login
+*********************************/
+.rightside-login {
+    width: 400px;
+    background-color: #2D9CDB;
+    padding: 50px;
+    border-left: 2px solid #63a37f;
+    display: none;
+}
+
+.rightside-login h1 {
+    color: #FFF;
+    text-shadow: 1px 2px #000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rightside-login img {
+    display: flex;
+    width: 150px;
+    margin: auto;
+}
+
+/* .input-bar {
+    display: flex;
+    align-items: center;
+} */
+
+.rightside-login label {
+    display: block;
+    color: #FFF;
+    text-shadow: 1px 1px #222;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* .rightside-login .input-bar img {
+    display: inline-block !important;
+    margin-left: -10px !important;
+    width: 20px !important;
+    z-index: 99 !important;
+} */
+
+.rightside-login input {
+    width: 100%;
+    border: 1px solid #999;
+    box-shadow: 1px 1px #333;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    outline: 0;
+    margin-left: -5px;
+}
+
+.rightside-login input:focus {
+    border-top: 2px solid #63a37f;
+    border-right: 2px solid #63a37f;
+    border-left: 2px solid #63a37f;
+    border-bottom: 2px solid #63a37f;
+}
+
+.input-button.btn-login input {
+    display: inline-block;
+    border-radius: 15px;
+    border: 1px solid #333 !important;
+    color: #33363A;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all .3s;
+}
+
+.input-button.btn-login:hover input {
+    background-color: #FF9C0D;
+    color: #33363A;
+    text-shadow: 1px 1px #ddd;
+    box-shadow: 2px 2px 3px #FFD00B;
+    border: none !important;
+}
+
+.input-button.btn-login:active input {
+    background-color: #0068FF;
+    color: #FFF;
+    text-shadow: 2px 2px #333;
+    box-shadow: 2px 2px 3px #005fb3;
+    border: none !important;
+}
+
+.input-button.btn-login:hover img {
     animation: rotate 1s ease;
     border: 2px solid #FFF;
     border-radius: 50%;
 }
 
-.input-button:active img {
+.input-button.btn-login:active img {
+    animation: scale 1s ease;
+    border: 2px solid #00FA6D;
+    border-radius: 50%;
+}
+
+/********************************
+Login
+*********************************/
+
+/********************************
+Load screen
+*********************************/
+.rightside-load {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: linear-gradient(#63a37f, #2D9CDB);
+    display: none;
+}
+.pokeball-transition {
+    transform-origin: center;
+    animation: rotate-load 2s ease forwards infinite;
+}
+
+.pokeball-transition img {
+    width: 50px;
+}
+.circle {
+    position: relative;
+    animation: rotate 2s ease forwards infinite;
+}
+
+.circle:nth-child(1){
+    left: -30px;
+    animation: slideleft 2s ease forwards infinite;
+}
+
+.circle:nth-child(3){
+    left: 30px;
+    animation: slideright 2s ease forwards infinite;
+}
+
+/********************************
+Load screen
+*********************************/
+
+/********************************
+Cadastro 
+*********************************/
+.rightside-cadastro {
+    width: 400px;
+    background-color: #63a37f;
+    padding: 50px;
+    border-left: 2px solid #2D9CDB;
+}
+
+.rightside-cadastro h1 {
+    color: #FFF;
+    text-shadow: 1px 2px #000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rightside-cadastro img {
+    display: flex;
+    width: 150px;
+    margin: auto;
+}
+
+/* .input-bar {
+    display: flex;
+    align-items: center;
+} */
+
+.rightside-cadastro label {
+    display: block;
+    color: #FFF;
+    text-shadow: 1px 1px #222;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* .rightside-cadastro .input-bar img {
+    display: inline-block !important;
+    margin-left: -10px !important;
+    width: 20px !important;
+    z-index: 99 !important;
+} */
+
+.rightside-cadastro input {
+    width: 100%;
+    border: 1px solid #999;
+    box-shadow: 1px 1px #333;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    outline: 0;
+    margin-left: -5px;
+}
+
+.rightside-cadastro input:focus {
+    border-top: 2px solid #2D9CDB;
+    border-right: 2px solid #2D9CDB;
+    border-left: 2px solid #2D9CDB;
+    border-bottom: 2px solid #2D9CDB;
+}
+
+.input-button.btn-cadastro input {
+    display: inline-block;
+    border-radius: 15px;
+    border: 1px solid #333 !important;
+    color: #33363A;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all .3s;
+}
+
+.input-button.btn-cadastro:hover input {
+    background-color: #FF9C0D;
+    color: #33363A;
+    text-shadow: 1px 1px #ddd;
+    box-shadow: 2px 2px 3px #FFD00B;
+    border: none !important;
+}
+
+.input-button.btn-cadastro:active input {
+    background-color: #00FA6D;
+    color: #FFF;
+    text-shadow: 2px 2px #333;
+    box-shadow: 2px 2px 3px #0A734C;
+    border: none !important;
+}
+
+.input-button.btn-cadastro:hover img {
+    animation: rotate 1s ease;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+}
+
+.input-button.btn-cadastro:active img {
     animation: scale 1s ease;
     border: 2px solid #2D9CDB;
     border-radius: 50%;
+}
+
+/********************************
+Cadastro 
+*********************************/
+
+.input-button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    cursor: pointer;
+}
+
+.input-button img {
+    margin-left: -35px !important;
+    width: 30px !important;
+    transition: transform .7s ease-in-out;
 }
 
 .input-login p {

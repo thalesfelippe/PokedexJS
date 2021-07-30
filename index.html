@@ -11,9 +11,16 @@
 <body>
     <div class="screen">
         <div class="leftside">
-            <img src="./images/pokeform.png" alt="imagem formulario pokemon">
+            <div class="poke-slider">
+                <div class="slider-item"></div>
+                <div class="slider-item"></div>
+                <div class="slider-item"></div>
+                <div class="slider-item"></div>
+                <div class="slider-item"></div>
+            </div>
         </div>
-        <div class="rightside">
+
+        <div id="cadastro" class="rightside-cadastro">
             <img src="./images/logo.png">
             <h1>Crie uma conta</h1>
 
@@ -23,33 +30,73 @@
                     <!-- <div class="input-bar">
                         <img src="./images/group.png">
                     </div> -->
-                    <input type="text" name="name" data-rules="required,min=4">
+                    <input type="text" name="name" placeholder="Nome" data-rules="required,min=4">
                 </label>
                 <label>
                     Seu e-mail:<br>
                     <!-- <div class="input-bar">
                         <img src="./images/group.png">
                     </div> -->
-                    <input type="text" name="email" data-rules="required,email">
+                    <input type="text" name="email" placeholder="E-mail" data-rules="required,email">
                 </label>
                 <label>
                     Sua senha:<br>
                     <!-- <div class="input-bar">
                         <img src="./images/group.png">
                     </div> -->
-                    <input type="password" name="password" data-rules="required,min=6">
+                    <input type="password" name="password" placeholder="Senha" data-rules="required,min=6">
                 </label>
                 <label>
-                    <div class="input-button">
+                    <div class="input-button btn-cadastro">
                         <input type="submit" value="Cadastrar" style="cursor: pointer;">
                         <img src="./images/pokeball.png">
                     </div>
                 </label>
             </form>
             <div class="input-login">
-                <p>Já tem uma conta? <a href="#">Faça login</a></p>
+                <p>Já tem uma conta? <a href="#" onclick="exibeLogin()">Faça login</a></p>
             </div>
         </div>
+
+        <div id="login" class="rightside-login">
+            <img src="./images/logo.png">
+            <h1>Faça login</h1>
+
+            <form method="POST" action="login.php" class="pokevalidator">
+                <label>
+                    Seu e-mail:<br>
+                    <!-- <div class="input-bar">
+                        <img src="./images/group.png">
+                    </div> -->
+                    <input type="text" name="email" placeholder="E-mail" data-rules="required,email">
+                </label>
+                <label>
+                    Sua senha:<br>
+                    <!-- <div class="input-bar">
+                        <img src="./images/group.png">
+                    </div> -->
+                    <input type="password" name="password" placeholder="Senha" data-rules="required,min=6">
+                </label>
+                <label>
+                    <div class="input-button btn-login">
+                        <input type="submit" value="Login" style="cursor: pointer;">
+                        <img src="./images/pokeball.png">
+                    </div>
+                </label>
+            </form>
+            <div class="input-login">
+                <p>Não tem uma conta? <a href="#" onclick="exibeCadastro()">Cadastre-se</a></p>
+            </div>
+        </div>
+
+        <div id="load-pokeball" class="rightside-load">
+            <div class="pokeball-transition">
+                <img src="./images/pokeball.png" class="circle">
+                <img src="./images/pokeball.png" class="circle">
+                <img src="./images/pokeball.png" class="circle">
+            </div>
+        </div>
+
     </div>
     <script src="./JS/form.js"></script>
 </body>
