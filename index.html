@@ -7,16 +7,21 @@
     <title>Virtual Pokedex</title>
     <link rel="icon" href="./images/favicon.png"/>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="screen">
         <div class="leftside">
+            <div class="slider-controls">
+                <div class="slider-control" onclick="goPrevious();"><i class="fas fa-arrow-alt-circle-left"></i></div>
+                <div class="slider-control" onclick="goNext();"><i class="fas fa-arrow-alt-circle-right"></i></div>
+            </div>
             <div class="poke-slider">
-                <div class="slider-item"></div>
-                <div class="slider-item"></div>
-                <div class="slider-item"></div>
-                <div class="slider-item"></div>
-                <div class="slider-item"></div>
+                <div class="slider-item" style="background-image: url('images/pokeslide1.png')"></div>
+                <div class="slider-item" style="background-image: url('images/pokeslide2.png')"></div>
+                <div class="slider-item" style="background-image: url('images/pokeslide3.png')"></div>
+                <div class="slider-item" style="background-image: url('images/pokeslide4.png')"></div>
+                <div class="slider-item" style="background-image: url('images/pokeslide5.png')"></div>
             </div>
         </div>
 
@@ -99,5 +104,6 @@
 
     </div>
     <script src="./JS/form.js"></script>
+    <script src="./JS/slider.js"></script>
 </body>
 </html>
