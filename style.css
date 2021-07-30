@@ -91,6 +91,8 @@ Poke-Slider
 *********************************/
 
 .leftside {
+    display: flex;
+    flex-direction: column;
     flex: 60%;
     height: 100vh;
     overflow: hidden;
@@ -130,7 +132,7 @@ Poke-Slider
     border-radius: 100%;
     color: #FFD00B;
     background-color: #FFF;
-    font-size: 45px;
+    font-size: 30px;
     margin-top: 2px;
     transition: all 0.3s ease
 }
@@ -159,10 +161,10 @@ Login
 .rightside-login {
     display: flex;
     flex-direction: column;
-    flex: 30%;
+    flex: 20%;
     width: 400px;
     background-color: #2D9CDB;
-    padding: 50px;
+    padding: 35px;
     border-left: 2px solid #63a37f;
     display: none;
 }
@@ -303,9 +305,9 @@ Cadastro
 *********************************/
 .rightside-cadastro {
     display: flex;
-    flex: 30%;
+    flex: 20%;
     background-color: #63a37f;
-    padding: 50px;
+    padding: 35px;
     border-left: 2px solid #2D9CDB;
     flex-direction: column;
 }

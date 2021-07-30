@@ -8,7 +8,7 @@ function exibeLogin(){
 
 function exibeCadastro(){
     var div = document.getElementById("cadastro");
-    div.style.display = "block";
+    div.style.display = "flex";
     var div = document.getElementById("login");
     div.style.display = "none";
     }
