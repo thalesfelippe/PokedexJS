@@ -1,3 +1,18 @@
+// Login
+function exibeLogin(){
+    var div = document.getElementById("login");
+    div.style.display = "block";
+    var div = document.getElementById("cadastro");
+    div.style.display = "none";
+    }
+
+function exibeCadastro(){
+    var div = document.getElementById("cadastro");
+    div.style.display = "block";
+    var div = document.getElementById("login");
+    div.style.display = "none";
+    }
+// Validação
 let PokeValidator = {
   handleSubmit:(event) => {
       event.preventDefault();
