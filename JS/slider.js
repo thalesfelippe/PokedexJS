@@ -3,7 +3,7 @@ let currentSlide = 0;
 
 let sliderWidth = document.querySelector('.leftside').clientWidth;
 
-document.querySelector('.poke-slider').style.width = `${sliderWidth * totalSlides})px`;
+document.querySelector('.poke-slider').style.width = `${sliderWidth * totalSlides}px`;
 
 document.querySelector('.slider-controls').style.width = `${sliderWidth}px`;
 document.querySelector('.slider-controls').style.height = `${document.querySelector('.leftside').clientHeight}px`;

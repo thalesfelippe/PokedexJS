@@ -84,7 +84,6 @@ Animation
 
 .screen {
     display: flex;
-    height: 100vh;
 }
 
 /********************************
@@ -92,8 +91,8 @@ Poke-Slider
 *********************************/
 
 .leftside {
-    display: flex;
     flex: 60%;
+    height: 100vh;
     overflow: hidden;
     border-right: 1px solid #000;
 }
@@ -160,7 +159,7 @@ Login
 .rightside-login {
     display: flex;
     flex-direction: column;
-    flex: 20%;
+    flex: 30%;
     width: 400px;
     background-color: #2D9CDB;
     padding: 50px;
@@ -304,7 +303,7 @@ Cadastro
 *********************************/
 .rightside-cadastro {
     display: flex;
-    flex: 20%;
+    flex: 30%;
     background-color: #63a37f;
     padding: 50px;
     border-left: 2px solid #2D9CDB;
