@@ -1,18 +1,28 @@
-// Login
+// Login screen
 function exibeLogin(){
-    var div = document.getElementById("login");
-    div.style.display = "block";
+    var div = document.getElementById("load-pokeball");
+    div.style.display = "flex";
+    setTimeout(function(exibeLogin){ var div = document.getElementById("load-pokeball");
+    div.style.display = "none"; }, 1000);
+    setTimeout(function(exibeLogin){ var div = document.getElementById("login");
+    div.style.display = "flex"; }, 1010);
     var div = document.getElementById("cadastro");
     div.style.display = "none";
     }
 
+// Register screen
 function exibeCadastro(){
-    var div = document.getElementById("cadastro");
+    var div = document.getElementById("load-pokeball");
     div.style.display = "flex";
+    setTimeout(function(exibeLogin){ var div = document.getElementById("load-pokeball");
+    div.style.display = "none"; }, 1000);
+    setTimeout(function(exibeLogin){ var div = document.getElementById("cadastro");
+    div.style.display = "flex"; }, 1010);
     var div = document.getElementById("login");
     div.style.display = "none";
     }
-// Validação
+
+// Validation Cadastro
 let PokeValidator = {
   handleSubmit:(event) => {
       event.preventDefault();
