@@ -16,6 +16,53 @@ body {
 Animation
 *********************************/
 
+@keyframes on-effect {
+    0% { 
+        background-color: #28AAFD;
+        border: 3px solid #DEDEDE;
+    }
+    25% { 
+        background-color: #28AAFD;
+        border: 3px solid #DEDEDE;
+    }
+    30% { 
+        background-color: #28AAFD;
+        border: 3px solid #DEDEDE;
+    }
+    35% {
+        background-color: #C1E6FE;
+        border: 3px solid #28AAFD;
+    }
+    37% { 
+        background-color: #28AAFD;
+        border: 3px solid #DEDEDE;
+    }
+    50% {
+        background-color: #28AAFD;
+        border: 3px solid #DEDEDE;
+    }
+    75% {
+        background-color: #C1E6FE;
+        border: 3px solid #28AAFD;
+    }
+    78% {
+        background-color: #28AAFD;
+        border: 3px solid #DEDEDE;
+    }
+    80% {
+        background-color: #C1E6FE;
+        border: 3px solid #28AAFD;
+    }
+    82% {
+        background-color: #28AAFD;
+        border: 3px solid #DEDEDE;
+    }
+    100% {
+        background-color: #28AAFD;
+        border: 3px solid #DEDEDE;
+    }
+}
+
 /********************************
 Animation
 *********************************/
@@ -49,19 +96,20 @@ Animation
 .leftside-top {
     width: 300px;
     height: 80px;
-    background-color: red;
+    background-color: #DC0A2D;
     border-radius: 20px 20px 0 0;
     display: flex;
 }
 
 .onbutton {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin-top: 10px;
     margin-left: 10px;
-    background-color: blue;
+    background-color: #28AAFD;
     border-radius: 50%;
-    border: 5px solid #ddd;
+    border: 3px solid #DEDEDE;
+    animation: on-effect 5s ease-in-out forwards infinite;
 }
 
 .redbutton {
@@ -104,19 +152,20 @@ Animation
 .leftside-center {
     width: 300px;
     height: 220px;
-    background-color: yellow;
+    background-color: #DC0A2D;
     display: flex;
 }
 
 .leftside-display {
     display: flex;
-    width: 250px;
+    width: 220px;
     height: 200px;
-    background-color: #ddd;
+    background-color: #DEDEDE;
     margin: auto;
-    border-radius: 10px 10px 10px 50px;
+    border-radius: 10px 10px 10px 10px;
     flex-direction: column;
     flex-wrap: nowrap;
+    border-bottom: 3px solid #787878;
 }
 
 .display-dots {
@@ -130,8 +179,9 @@ Animation
     width: 10px;
     height: 10px;
     margin: 10px 2px 10px 10px;
-    background-color: red;
+    background-color: #DC0A2D;
     border-radius: 50%;
+    border: 1px solid #89061C;
 }
 
 .display-pokes {
@@ -139,8 +189,22 @@ Animation
     margin-right: auto;
     width: 180px;
     height: 150px;
-    background-color: blue;
-    border: 5px solid #000;
+    background-color: #28AAFD;
+    border: 5px solid #2B2B2B;
+}
+
+.display-pokes-head i {
+    color: #FFF;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+}
+
+.display-pokes img {
+    display: flex;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
 }
 
 .display-bottom {
@@ -151,12 +215,13 @@ Animation
 
 .display-bigdots {
     display: flex;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     margin: 10px 0px;
-    background-color: red;
-    margin-left: 35px;
+    background-color: #DC0A2D;
+    margin-left: 20px;
     border-radius: 50%;
+    border: 1px solid #89061C;
 }
 
 .display-lines {
@@ -164,8 +229,12 @@ Animation
     width: 25px;
     height: 25px;
     margin: 10px 0px;
-    margin-right: 35px;
-    background-color: #000;
+    margin-right: 20px;
+    background-color: transparent;
+}
+
+.display-lines i {
+    font-size: 28px;
 }
 /* LEFTSIDE-CENTER */
 
@@ -174,18 +243,20 @@ Animation
 .leftside-bottom {
     width: 300px;
     height: 120px;
-    background-color: blue;
+    background-color: #DC0A2D;
     display: flex;
 }
 
 .bottom-dot {
     display: flex;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     margin: 15px;
     margin-right: 15px;
-    background-color: #000;
+    background-color: #2B2B2B;
     border-radius: 50%;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
 }
 
 .black-bars {
@@ -198,12 +269,12 @@ Animation
     margin: 10px 0px;
     margin-right: 30px;
     background-color: #000;
-    border-radius: 20%;
+    border-radius: 15%;
 }
 
 .black-bar:last-child {
     margin-right: 0px;
-    background-color: red;
+    background-color: #28AAFD;
 }
 
 .bottom-screen {
@@ -211,8 +282,17 @@ Animation
     width: 100px;
     height: 50px;
     margin: 5px;
-    border-radius: 5%;
-    background-color: green;
+    border-radius: 8%;
+    background-color: #51AE5F;
+    border-bottom: 2px solid #3E8048;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-screen span {
+    color: #FFF;
+    text-align: center;
+    font-weight: bold;
 }
 
 .bottom-controls {
@@ -228,22 +308,23 @@ Animation
 
 .control-top {
     position: absolute;
-    top: 0%;
-    left: 37%;
-    width: 20px;
+    top: 1%;
+    left: 35%;
+    width: 21px;
     height: 25px;
-    background-color: #000;
+    background-color: #2B2B2B;
     border-radius: 5px 5px 0 0;
 }
 
 .control-bottom {
     position: absolute;
-    bottom: 0%;
-    left: 37%;
-    width: 20px;
+    bottom: 2%;
+    left: 35%;
+    width: 21px;
     height: 25px;
-    background-color: #000;
+    background-color: #2B2B2B;
     border-radius: 0 0 5px 5px;
+    border-bottom: 2px solid #000;
 }
 
 .control-left {
@@ -251,9 +332,48 @@ Animation
     top: 36%;
     left: 0%;
     width: 25px;
-    height: 20px;
-    background-color: #000;
+    height: 19px;
+    background-color: #2B2B2B;
     border-radius: 5px 0 0 5px;
+    border-bottom: 2px solid #000;
+}
+
+.control-bottom:hover {
+    background: linear-gradient(to bottom, #111, #222);
+    transition: all 0.3s ease;
+}
+.control-top:hover {
+    background: linear-gradient(to top, #111, #222);
+    transition: all 0.3s ease;
+}
+.control-center:hover {
+    background-color: #222;
+    transition: all 0.3s ease;
+}
+.control-right:hover {
+    background: linear-gradient(to right, #111, #222);
+    transition: all 0.3s ease;
+}
+.control-left:hover {
+    background: linear-gradient(to left, #111, #222);
+    transition: all 0.3s ease;
+}
+
+.control-bottom:hover i,
+.control-top:hover i,
+.control-center:hover i,
+.control-right:hover i,
+.control-left:hover i {
+    color: #000;
+}
+
+.control-center {
+    position: absolute;
+    top: 36%;
+    left: 35%;
+    width: 21px;
+    height: 19px;
+    background-color: #2B2B2B;
 }
 
 .control-right {
@@ -261,9 +381,57 @@ Animation
     top: 36%;
     right: 0%;
     width: 25px;
-    height: 20px;
-    background-color: #000;
+    height: 19px;
+    background-color: #2B2B2B;
     border-radius: 0 5px 5px 0;
+    border-bottom: 2px solid #000;
+}
+
+.control-right i {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    align-content: center;
+    margin-top: 1px;
+    margin-right: 4px;
+    color: #191919;
+}
+
+.control-left i {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    margin-top: 1px;
+    margin-left: 4px;
+    color: #191919;
+}
+
+.control-top i {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-left: 5px;
+    color: #191919;
+}
+
+.control-bottom i {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-left: 5px;
+    margin-top: 9px;
+    color: #191919;
+}
+
+.control-center i {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 10px;
+    color: #191919;
 }
 
 /* LEFTSIDE-BOTTOM */
@@ -273,7 +441,7 @@ Animation
 .rightside-top {
     width: 300px;
     height: 170px;
-    background-color: yellow;
+    background-color: #DC0A2D;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -282,10 +450,12 @@ Animation
 
 .rightside-screen {
     width: 250px;
-    height: 70px;
-    background-color: #000;
+    height: 90px;
+    background-color: #2B2B2B;
     display: flex;
     margin-bottom: 10px;
+    border-radius: 5%;
+    border-bottom: 2px solid #000;
 }
 
 /* RIGHTSIDE-TOP */
@@ -294,25 +464,47 @@ Animation
 
 .rightside-center {
     width: 300px;
-    height: 70px;
-    background-color: green;
+    height: 80px;
+    background-color: #DC0A2D;
     display: flex;
     justify-content: center;
 }
 
 .rightside-bluebutton {
     width: 250px;
-    height: 60px;
-    background-color: blueviolet;
+    height: 80px;
+    background-color: transparent;
     display: flex;
     flex-wrap: wrap;
 }
 
 .btn-blue {
+    display: flex;
     width: 50px;
-    height: 30px;
-    background-color:white;
-    border: 1px solid black;
+    height: 40px;
+    background-color: #28AAFD;
+    border-bottom: 2px solid #1F82C3;
+    border-left: 2px solid #1F82C3;
+    border-right: 2px solid #1F82C3;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.btn-blue i {
+    display: flex;
+    text-align: center;
+    color: #DDD;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-blue:hover {
+    background-color: #66c0fc;
+}
+
+.btn-blue:hover i {
+    color: #FFF;
 }
 
 /* RIGHTSIDE-CENTER */
@@ -321,68 +513,121 @@ Animation
 
 .rightside-bottom {
     width: 300px;
-    height: 100px;
-    background-color: violet;
+    height: 150px;
+    background-color: #DC0A2D;
     display: flex;
     flex-direction: column;
 }
 
 .black-bars-right {
     display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
 }
 
 .black-bar-right {
     width: 40px;
-    height: 5px;
+    height: 8px;
     margin: 10px 0px;
     margin-right: 5px;
-    background-color: #000;
+    background-color: #2B2B2B;
+    border-bottom: 1px solid #000;
     border-radius: 20%;
 }
 
 .action-controls {
     display: flex;
-    justify-content: flex-start;
-    align-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.action-right {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.action-right {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .backbtn {
+    display: flex;
     width: 50px;
     height: 30px;
-    background-color:white;
-    border: 1px solid black;
+    background-color: #FFF;
+    border-bottom: 2px solid #787878;
+    border-left: 1px solid #787878;
+    border-right: 1px solid #787878;
+    border-radius: 10% 0 0 10%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
 
 .nseibtn {
+    display: flex;
     width: 50px;
     height: 30px;
-    background-color:white;
-    border: 1px solid black;
+    background-color: #FFF;
+    border-bottom: 2px solid #787878;
+    border-right: 1px solid #787878;
+    border-left: 1px solid #787878;
+    border-radius: 0 10% 10% 0;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.backbtn:hover {
+    border-bottom: 2px solid #333;
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
+    background-color: #DDD;
+}
+.nseibtn:hover {
+    border-bottom: 2px solid #333;
+    border-right: 1px solid #333;
+    border-left: 1px solid #333;
+    background-color: #DDD;
+}
+
+.backbtn i,
+.nseibtn i {
+    color: #555;
+    transition: all 0.3s ease;
+}
+
+.backbtn:hover i,
+.nseibtn:hover i {
+    color: #000;
 }
 
 .yellowdot {
-    width: 20px;
-    height: 20px;
-    background-color: yellow;
-    border: 2px solid #FFF;
+    width: 30px;
+    height: 30px;
+    background-color: #FFDF18;
+    border-bottom: 1px solid #787878;
     border-radius: 50%;
+    margin-top: 15px;
 }
 
-.bars-controls {
+.sound-controls {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
-.black-bars {
-    width: 60px;
-    height: 20px;
+.sound-bars {
+    width: 90px;
+    height: 30px;
     margin: 10px 0px;
     margin-right: 5px;
-    background-color: #000;
-    border-radius: 20%;
+    background-color: #2B2B2B;
+    border-radius: 8%;
+    border-bottom: 2px solid #000;
 }
 /* RIGHTSIDE-BOTTOM */
 .pokedex-divisor {
@@ -398,6 +643,7 @@ Animation
     background-color: transparent;
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
