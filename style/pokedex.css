@@ -536,26 +536,77 @@ Animation
 
 .rightside-top {
     width: 300px;
-    height: 140px;
+    height: 55px;
+    background-color: transparent;
+    display: flex;
+    border-left: 1px solid #89061C;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 0 0 0;
+}
+
+.rightside-top-slice1 {
+    display: flex;
+    width: 150px;
+    height: 55px;
+    background-color: #DC0A2D;
+    border-radius: 10px 30px 0 0;
+    border-top: 1px solid #2B2B2B;
+}
+
+.top-slice1-border {
+    display: flex;
+    justify-content: center;
+    border-top: 3px solid #89061C;
+    border-left: 2px solid #89061C;
+    margin-top: 3px;
+    margin-left: -1px;
+    border-radius: 10px 30px 0 0;
+    width: 145px;
+}
+
+.rightside-top-slice2 {
+    display: flex;
+    width: 150px;
+    height: 30px;
+    background-color: #DC0A2D;
+    border-radius: 0 50px 0 0;
+    border-top: 1px solid #2B2B2B;
+    margin-top: 35px;
+    z-index: 99;
+}
+
+.top-slice2-border {
+    display: flex;
+    justify-content: center;
+    border-right: 3px solid #89061C;
+    border-top: 3px solid #89061C;
+    margin-top: 3px;
+    margin-left: -6.5px;
+    border-radius: 0px 30px 0 0;
+    width: 152px;
+}
+
+
+.rightside-top-mid {
+    width: 300px;
+    height: 85px;
     background-color: #DC0A2D;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    border-radius: 0 20px 0 0;
-    border-top: 1px solid #2B2B2B;
     border-right: 1px solid #2B2B2B;
     border-left: 1px solid #89061C;
 }
 
-.rightside-top-border {
+.rightside-top-mid-border {
     display: flex;
     justify-content: center;
-    border-top: 3px solid #89061C;
     border-right: 3px solid #89061C;
     border-left: 1px solid #89061C;
-    border-radius: 0 20px 0 0 ;
-    margin-left: -5px;
-    width: 295px
+    margin-left: -3px;
+    height: 90px;
+    width: 295px;
 }
 
 .rightside-screen {
@@ -563,10 +614,10 @@ Animation
     height: 70px;
     background-color: #2B2B2B;
     display: flex;
-    margin-top: 50px;
     margin-bottom: 10px;
     border-radius: 5%;
     border-bottom: 2px solid #000;
+    z-index: 99;
 }
 
 /* RIGHTSIDE-TOP */
@@ -588,7 +639,7 @@ Animation
     justify-content: center;
     border-right: 3px solid #89061C;
     border-left: 1px solid #89061C;
-    margin-left: -5px;
+    margin-left: -3px;
     width: 295px
 }
 
