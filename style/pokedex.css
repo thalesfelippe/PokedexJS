@@ -20,46 +20,57 @@ Animation
     0% { 
         background-color: #28AAFD;
         border: 3px solid #DEDEDE;
+        box-shadow: none;
     }
     25% { 
         background-color: #28AAFD;
         border: 3px solid #DEDEDE;
+        box-shadow: none;
     }
     30% { 
         background-color: #28AAFD;
         border: 3px solid #DEDEDE;
+        box-shadow: none;
     }
     35% {
         background-color: #C1E6FE;
         border: 3px solid #28AAFD;
+        box-shadow: 3px 3px 40px #E4F4FF;
     }
     37% { 
         background-color: #28AAFD;
         border: 3px solid #DEDEDE;
+        box-shadow: none;
     }
     50% {
         background-color: #28AAFD;
         border: 3px solid #DEDEDE;
+        box-shadow: none;
     }
     75% {
         background-color: #C1E6FE;
         border: 3px solid #28AAFD;
+        box-shadow: 3px 3px 40px #E4F4FF;
     }
     78% {
         background-color: #28AAFD;
         border: 3px solid #DEDEDE;
+        box-shadow: none;
     }
     80% {
         background-color: #C1E6FE;
         border: 3px solid #28AAFD;
+        box-shadow: 3px 3px 40px #E4F4FF;
     }
     82% {
         background-color: #28AAFD;
         border: 3px solid #DEDEDE;
+        box-shadow: none;
     }
     100% {
         background-color: #28AAFD;
         border: 3px solid #DEDEDE;
+        box-shadow: none;
     }
 }
 
@@ -71,16 +82,13 @@ Animation
     background-image: url('/images/pokedexbg.png');
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
-    align-content: center;
-    align-items: center;
 }
 
 .pokedex-body {
     display: flex;
+    margin-top: 50px;
 }
 
 .pokedex-leftside {
@@ -99,9 +107,28 @@ Animation
     background-color: #DC0A2D;
     border-radius: 20px 20px 0 0;
     display: flex;
+    border-top: 1px solid #2B2B2B;
+    border-left: 1px solid #2B2B2B;
+    border-right: 1px solid #89061C;
+}
+
+.leftside-top-border1 {
+    display: flex;
+    border-bottom: 7px solid #89061C;
+    margin-left: 5px;
+    border-radius: 0 0 30px 0;
+    width: 170px
+}
+
+.leftside-top-border2 {
+    display: flex;
+    border-bottom: 5px solid #89061C;
+    margin-bottom: 25px;
+    width: 125px
 }
 
 .onbutton {
+    display: relative;
     width: 50px;
     height: 50px;
     margin-top: 10px;
@@ -109,39 +136,83 @@ Animation
     background-color: #28AAFD;
     border-radius: 50%;
     border: 3px solid #DEDEDE;
-    animation: on-effect 5s ease-in-out forwards infinite;
+    animation: on-effect 8s ease forwards infinite;
+}
+
+.on-reflection {
+    display: absolute;
+    width: 12px;
+    height: 12px;
+    margin-top: 4px;
+    margin-left: 10px;
+    background-color: #A1DAFE;
+    border-radius: 50%;
+    box-shadow: 1px 1px 10px #A1DAFE;
 }
 
 .redbutton {
+    display: relative;
     width: 12px;
     height: 12px;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 2px;
     background-color: red;
-    border: 2px solid #FFF;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+}
+
+.red-reflection {
+    display: absolute;
+    width: 3px;
+    height: 3px;
+    margin-top: 1px;
+    margin-left: 1px;
+    background-color: #FFF;
     border-radius: 50%;
 }
 
 .yellowbutton {
+    display: relative;
     width: 12px;
     height: 12px;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 2px;
-    background-color: yellow;
-    border: 2px solid #FFF;
+    background-color: #FFE748;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+}
+
+.yellow-reflection {
+    display: absolute;
+    width: 3px;
+    height: 3px;
+    margin-top: 1px;
+    margin-left: 1px;
+    background-color: #FFF;
     border-radius: 50%;
 }
 
 .greenbutton {
+    display: relative;
     width: 12px;
     height: 12px;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 2px;
-    background-color: green;
-    border: 2px solid #FFF;
+    background-color: #4FAE5D;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+}
+
+.green-reflection {
+    display: absolute;
+    width: 3px;
+    height: 3px;
+    margin-top: 1px;
+    margin-left: 1px;
+    background-color: #FFF;
     border-radius: 50%;
 }
 
@@ -150,10 +221,20 @@ Animation
 /* LEFTSIDE-CENTER */
 
 .leftside-center {
+    display: relative;
     width: 300px;
     height: 220px;
     background-color: #DC0A2D;
     display: flex;
+    border-left: 1px solid #2B2B2B;
+    border-right: 1px solid #89061C;
+}
+
+.leftside-center-border {
+    display: absolute;
+    display: flex;
+    margin-left: 5px;
+    border-left: 3px solid #89061C;
 }
 
 .leftside-display {
@@ -162,6 +243,7 @@ Animation
     height: 200px;
     background-color: #DEDEDE;
     margin: auto;
+    margin-left: 35px;
     border-radius: 10px 10px 10px 10px;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -187,7 +269,7 @@ Animation
 .display-pokes {
     margin-left: auto;
     margin-right: auto;
-    width: 180px;
+    width: 170px;
     height: 150px;
     background-color: #28AAFD;
     border: 5px solid #2B2B2B;
@@ -219,7 +301,7 @@ Animation
     height: 20px;
     margin: 10px 0px;
     background-color: #DC0A2D;
-    margin-left: 20px;
+    margin-left: 25px;
     border-radius: 50%;
     border: 1px solid #89061C;
 }
@@ -229,7 +311,7 @@ Animation
     width: 25px;
     height: 25px;
     margin: 10px 0px;
-    margin-right: 20px;
+    margin-right: 25px;
     background-color: transparent;
 }
 
@@ -245,6 +327,20 @@ Animation
     height: 120px;
     background-color: #DC0A2D;
     display: flex;
+    border-radius: 0 0 5px 10px;
+    border-bottom: 1px solid #2B2B2B;
+    border-left: 1px solid #2B2B2B;
+    border-right: 1px solid #89061C;
+}
+
+.leftside-bottom-border {
+    display: flex;
+    margin-left: 5px;
+    border-left: 3px solid #89061C;
+    border-bottom: 3px solid #89061C;
+    border-radius: 0 0 5px 10px;
+    margin-bottom: 5px;
+    width: 300px;
 }
 
 .bottom-dot {
@@ -440,19 +536,34 @@ Animation
 
 .rightside-top {
     width: 300px;
-    height: 170px;
+    height: 140px;
     background-color: #DC0A2D;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     border-radius: 0 20px 0 0;
+    border-top: 1px solid #2B2B2B;
+    border-right: 1px solid #2B2B2B;
+    border-left: 1px solid #89061C;
+}
+
+.rightside-top-border {
+    display: flex;
+    justify-content: center;
+    border-top: 3px solid #89061C;
+    border-right: 3px solid #89061C;
+    border-left: 1px solid #89061C;
+    border-radius: 0 20px 0 0 ;
+    margin-left: -5px;
+    width: 295px
 }
 
 .rightside-screen {
     width: 250px;
-    height: 90px;
+    height: 70px;
     background-color: #2B2B2B;
     display: flex;
+    margin-top: 50px;
     margin-bottom: 10px;
     border-radius: 5%;
     border-bottom: 2px solid #000;
@@ -468,6 +579,17 @@ Animation
     background-color: #DC0A2D;
     display: flex;
     justify-content: center;
+    border-right: 1px solid #2B2B2B;
+    border-left: 1px solid #89061C;
+}
+
+.rightside-center-border {
+    display: flex;
+    justify-content: center;
+    border-right: 3px solid #89061C;
+    border-left: 1px solid #89061C;
+    margin-left: -5px;
+    width: 295px
 }
 
 .rightside-bluebutton {
@@ -517,6 +639,21 @@ Animation
     background-color: #DC0A2D;
     display: flex;
     flex-direction: column;
+    border-radius: 0 0 10px 5px;
+    border-bottom: 1px solid #2B2B2B;
+    border-right: 1px solid #2B2B2B;
+    border-left: 1px solid #89061C;
+}
+
+.rightside-bottom-border {
+    display: flex;
+    flex-direction: column;
+    border-right: 3px solid #89061C;
+    border-bottom: 3px solid #89061C;
+    border-left: 1px solid #89061C;
+    border-radius: 0 0 10px 5px;
+    width: 295px;
+    height: 144px;
 }
 
 .black-bars-right {
@@ -606,12 +743,23 @@ Animation
 }
 
 .yellowdot {
+    display: relative;
     width: 30px;
     height: 30px;
     background-color: #FFDF18;
     border-bottom: 1px solid #787878;
     border-radius: 50%;
     margin-top: 15px;
+}
+
+.yellowdot-reflection {
+    display: absolute;
+    width: 10px;
+    height: 10px;
+    margin-top: 3px;
+    margin-left: 5px;
+    background-color: #FFF7C4;
+    border-radius: 50%;
 }
 
 .sound-controls {
@@ -630,11 +778,100 @@ Animation
     border-bottom: 2px solid #000;
 }
 /* RIGHTSIDE-BOTTOM */
-.pokedex-divisor {
-    width: 20px;
-    height: 300px;
-    background-color: white;
+.pokedex-divisor-top {
+    display: relative;
+    width: 40px;
+    height: 40px;
+    margin-top: 50px;
+    background-color: #DC0A2D;
     display: flex;
+    border: 3px solid #89061C;
+    border-right: 7px solid #89061C;;
+    border-radius: 5px;
+}
+
+.divisor-top-reflection1 {
+    display: absolute;
+    width: 5px;
+    height: 34px;
+    margin-top: 0.5px;
+    margin-left: 5px;
+    background-color: #DEB4BB;
+    border-radius: 1px;
+}
+
+.divisor-top-reflection2 {
+    display: absolute;
+    width: 2px;
+    height: 34px;
+    margin-top: 0.5px;
+    margin-left: 6px;
+    background-color: #DD546B;
+    border-radius: 1px;
+}
+
+.pokedex-divisor-center {
+    display: relative;
+    width: 40px;
+    height: 290px;
+    background-color: #DC0A2D;
+    display: flex;
+    border: 3px solid #89061C;
+    border-right: 7px solid #89061C;;
+    border-bottom: none;
+    border-top: 1px solid #89061C;
+    border-radius: 5px;
+}
+
+.divisor-center-reflection1 {
+    display: absolute;
+    width: 5px;
+    height: 289px;
+    margin-top: 0.5px;
+    margin-left: 5px;
+    background-color: #DEB4BB;
+    border-radius: 1px;
+}
+
+.divisor-center-reflection2 {
+    display: absolute;
+    width: 2px;
+    height: 289px;
+    margin-top: 0.5px;
+    margin-left: 6px;
+    background-color: #DD546B;
+    border-radius: 1px;
+}
+
+.pokedex-divisor-bottom {
+    display: relative;
+    width: 40px;
+    height: 40px;
+    background-color: #DC0A2D;
+    display: flex;
+    border: 3px solid #89061C;
+    border-right: 7px solid #89061C;;
+    border-radius: 5px;
+}
+
+.divisor-bottom-reflection1 {
+    display: absolute;
+    width: 5px;
+    height: 34px;
+    margin-top: 0.5px;
+    margin-left: 5px;
+    background-color: #DEB4BB;
+    border-radius: 1px;
+}
+
+.divisor-bottom-reflection2 {
+    display: absolute;
+    width: 2px;
+    height: 34px;
+    margin-top: 0.5px;
+    margin-left: 6px;
+    background-color: #DD546B;
+    border-radius: 1px;
 }
 
 .pokedex-rightside {
@@ -643,7 +880,7 @@ Animation
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 @media (max-width: 768px) {
