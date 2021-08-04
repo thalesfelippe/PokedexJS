@@ -79,7 +79,7 @@ Animation
 *********************************/
 
 .screen {
-    background-image: url('/images/pokedexbg.png');
+    background-image: url('../images/pokedexbg.png');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -434,24 +434,24 @@ Animation
     border-bottom: 2px solid #000;
 }
 
-.control-bottom:hover {
-    background: linear-gradient(to bottom, #111, #222);
-    transition: all 0.3s ease;
-}
-.control-top:hover {
+.control-bottom:active {
     background: linear-gradient(to top, #111, #222);
     transition: all 0.3s ease;
 }
-.control-center:hover {
+.control-top:active {
+    background: linear-gradient(to bottom, #111, #222);
+    transition: all 0.3s ease;
+}
+.control-center:active {
     background-color: #222;
     transition: all 0.3s ease;
 }
-.control-right:hover {
-    background: linear-gradient(to right, #111, #222);
+.control-right:active {
+    background: linear-gradient(to left, #111, #222);
     transition: all 0.3s ease;
 }
-.control-left:hover {
-    background: linear-gradient(to left, #111, #222);
+.control-left:active {
+    background: linear-gradient(to right, #111, #222);
     transition: all 0.3s ease;
 }
 
@@ -618,7 +618,7 @@ Animation
     text-align: center;
     color: #DDD;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 .btn-blue:hover {
@@ -627,6 +627,15 @@ Animation
 
 .btn-blue:hover i {
     color: #FFF;
+}
+
+.btn-blue:active {
+    background-color: #66c0fc;
+    box-shadow: 0px 0px 2px #ddd;
+}
+
+.btn-blue:active i {
+    color: #1F82C3;
 }
 
 /* RIGHTSIDE-CENTER */
@@ -704,7 +713,7 @@ Animation
     transition: all 0.3s ease;
 }
 
-.nseibtn {
+.verify {
     display: flex;
     width: 50px;
     height: 30px;
@@ -724,7 +733,8 @@ Animation
     border-right: 1px solid #333;
     background-color: #DDD;
 }
-.nseibtn:hover {
+
+.verify:hover {
     border-bottom: 2px solid #333;
     border-right: 1px solid #333;
     border-left: 1px solid #333;
@@ -732,14 +742,27 @@ Animation
 }
 
 .backbtn i,
-.nseibtn i {
+.verify i {
     color: #555;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 .backbtn:hover i,
-.nseibtn:hover i {
+.verify:hover i {
     color: #000;
+}
+
+.backbtn:active,
+.verify:active {
+    background-color: #C5D7DD;
+}
+
+.backbtn:active i {
+    color: #FFD00B;
+}
+
+.verify:active i {
+    color: #03A64A;
 }
 
 .yellowdot {
