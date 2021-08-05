@@ -5,6 +5,8 @@ const pokeId = document.querySelector('.poke-id');
 const pokeImage = document.querySelector('.poke-image');
 const pokeTypeOne = document.querySelector('.poke-type-one');
 const pokeTypeTwo = document.querySelector('.poke-type-two');
+const pokeTypeBgOne = document.querySelector('.poke-type-one');
+const pokeTypeBgTwo = document.querySelector('.poke-type-two');
 const pokeHp = document.querySelector('.poke-hp');
 const pokeDefense = document.querySelector('.poke-defense');
 const pokeAttack = document.querySelector('.poke-attack');
@@ -27,7 +29,7 @@ const TYPES = [
     'dragon', 'psychic', 'ice'
 ];
 let prevUrl = 'http://';
-let nextUrl = 'http://';
+let nextUrl = 'https://';
 
 // Functions
 
@@ -41,7 +43,7 @@ const handleRightButtonClick = (e) => {
 
 }
 
-fetch('https://pokeapi.co/api/v2/pokemon/150')
+fetch('https://pokeapi.co/api/v2/pokemon/149')
     .then(res => res.json())
     .then(data => {
         console.log(data);
@@ -54,12 +56,12 @@ fetch('https://pokeapi.co/api/v2/pokemon/150')
         if (dataSecondType) {
             pokeTypeTwo.classList.remove('hide');
             pokeTypeTwo.textContent = dataSecondType['type']['name'];
+            pokeTypeBgTwo.classList.add(dataSecondType['type']['name']);
         } else {
             pokeTypeTwo.classList.add('hide');
             pokeTypeTwo.textContent = '';
         }
-
-
+        pokeTypeBgOne.classList.add(dataFirstType['type']['name']);
 
         mainScreen.classList.remove('hide');
         pokeName.textContent = data['name'];

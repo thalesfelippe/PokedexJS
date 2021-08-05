@@ -1006,7 +1006,7 @@ Animation
     height: 30px;
     margin: 10px 0px;
     margin-right: 5px;
-    background-color: #2B2B2B;
+    background: #2B2B2B;
     border-radius: 8%;
     border-bottom: 2px solid #000;
 }
