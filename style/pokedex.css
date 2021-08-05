@@ -12,6 +12,161 @@ body {
     padding: 0;
 }
 
+/* POKEMON-BG-TYPES */
+
+.normal {
+    background: #BABAAE;
+}
+
+.fighting {
+    background: #A75543;
+}
+
+.flying {
+    background: #78A2FF;
+}
+
+.poison {
+    background: #A95CA0;
+}
+
+.ground {
+    background: #EECC55;
+}
+
+.rock {
+    background: #CCBD72;
+}
+
+.bug {
+    background: #C2D21E;
+}
+
+.ghost {
+    background: #7975D7;
+}
+
+.steel {
+    background: #C4C2DB;
+}
+
+.fire {
+    background: #FA5643;
+}
+
+.water {
+    background: #56ADFF;
+}
+
+.grass {
+    background: #8CD750;
+}
+
+.electric {
+    background: #FDE139;
+}
+
+.psychic {
+    background: #FA65B4;
+}
+
+.ice {
+    background: #96F1FF;
+}
+
+.dragon {
+    background: #8673FF;
+}
+
+.dark {
+    background: #8D6855;
+}
+
+.fairy {
+    background: #F9AEFF;
+}
+
+/* POKEMON-BG-TYPES */
+
+.hide {
+    display: none;
+}
+
+/********************************
+JS INFORMATION
+*********************************/
+.display-pokemon {
+    text-align: center;
+}
+
+.poke-image {
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 80px;
+}
+
+.poke-name {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.poke-stats,
+.poke-attacks {
+    font-weight: 400;
+    color: #999;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+}
+
+.poke-stats span,
+.poke-attacks span {
+    font-weight: bold;
+    color: #FFF;
+}
+
+.stats-hp,
+.stats-defense,
+.skill-one,
+.skill-three {
+    margin-bottom: 7px;
+}
+
+.poke-id {
+    color: #FFF;
+    font-size: 20px;
+}
+
+.poke-type-one {
+    border-radius: 3px;
+    display: block;
+    width: 90px;
+    height: 28px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.poke-type-two {
+    border-radius: 3px;
+    display: block;
+    width: 90px;
+    height: 28px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+}
+/********************************
+JS INFORMATION
+*********************************/
 /********************************
 Animation
 *********************************/
@@ -79,11 +234,13 @@ Animation
 *********************************/
 
 .screen {
-    background-image: url('../images/pokedexbg.png');
+    background-image: url(../images/pokedexbg.png);
     background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: center;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
 }
 
 .pokedex-body {
@@ -128,7 +285,6 @@ Animation
 }
 
 .onbutton {
-    display: relative;
     width: 50px;
     height: 50px;
     margin-top: 10px;
@@ -151,7 +307,6 @@ Animation
 }
 
 .redbutton {
-    display: relative;
     width: 12px;
     height: 12px;
     margin-top: 10px;
@@ -173,7 +328,6 @@ Animation
 }
 
 .yellowbutton {
-    display: relative;
     width: 12px;
     height: 12px;
     margin-top: 10px;
@@ -195,7 +349,6 @@ Animation
 }
 
 .greenbutton {
-    display: relative;
     width: 12px;
     height: 12px;
     margin-top: 10px;
@@ -221,7 +374,6 @@ Animation
 /* LEFTSIDE-CENTER */
 
 .leftside-center {
-    display: relative;
     width: 300px;
     height: 220px;
     background-color: #DC0A2D;
@@ -240,7 +392,7 @@ Animation
 .leftside-display {
     display: flex;
     width: 220px;
-    height: 200px;
+    height: 210px;
     background-color: #DEDEDE;
     margin: auto;
     margin-left: 35px;
@@ -280,13 +432,6 @@ Animation
     display: flex;
     justify-content: flex-end;
     margin-right: 5px;
-}
-
-.display-pokes img {
-    display: flex;
-    width: 90px;
-    height: 90px;
-    margin: 0 auto;
 }
 
 .display-bottom {
@@ -364,13 +509,15 @@ Animation
     height: 5px;
     margin: 10px 0px;
     margin-right: 30px;
-    background-color: #000;
+    background-color: #2B2B2B;
+    border-bottom: 1px solid #000;
     border-radius: 15%;
 }
 
 .black-bar:last-child {
     margin-right: 0px;
     background-color: #28AAFD;
+    border-bottom: 1px solid #1F82C3;
 }
 
 .bottom-screen {
@@ -410,6 +557,7 @@ Animation
     height: 25px;
     background-color: #2B2B2B;
     border-radius: 5px 5px 0 0;
+    cursor: pointer;
 }
 
 .control-bottom {
@@ -421,6 +569,7 @@ Animation
     background-color: #2B2B2B;
     border-radius: 0 0 5px 5px;
     border-bottom: 2px solid #000;
+    cursor: pointer;
 }
 
 .control-left {
@@ -432,6 +581,7 @@ Animation
     background-color: #2B2B2B;
     border-radius: 5px 0 0 5px;
     border-bottom: 2px solid #000;
+    cursor: pointer;
 }
 
 .control-bottom:active {
@@ -470,6 +620,7 @@ Animation
     width: 21px;
     height: 19px;
     background-color: #2B2B2B;
+    cursor: pointer;
 }
 
 .control-right {
@@ -481,6 +632,7 @@ Animation
     background-color: #2B2B2B;
     border-radius: 0 5px 5px 0;
     border-bottom: 2px solid #000;
+    cursor: pointer;
 }
 
 .control-right i {
@@ -620,6 +772,11 @@ Animation
     z-index: 99;
 }
 
+.rightside-screen span {
+    margin: auto;
+    font-size: 10px;
+}
+
 /* RIGHTSIDE-TOP */
 
 /* RIGHTSIDE-CENTER */
@@ -662,6 +819,7 @@ Animation
     justify-content: center;
     align-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .btn-blue i {
@@ -761,6 +919,7 @@ Animation
     border-radius: 10% 0 0 10%;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -775,6 +934,7 @@ Animation
     border-radius: 0 10% 10% 0;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -817,7 +977,6 @@ Animation
 }
 
 .yellowdot {
-    display: relative;
     width: 30px;
     height: 30px;
     background-color: #FFDF18;
@@ -836,13 +995,13 @@ Animation
     border-radius: 50%;
 }
 
-.sound-controls {
+.element-controls {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.sound-bars {
+.element-bars {
     width: 90px;
     height: 30px;
     margin: 10px 0px;
@@ -853,7 +1012,6 @@ Animation
 }
 /* RIGHTSIDE-BOTTOM */
 .pokedex-divisor-top {
-    display: relative;
     width: 40px;
     height: 40px;
     margin-top: 50px;
@@ -885,7 +1043,6 @@ Animation
 }
 
 .pokedex-divisor-center {
-    display: relative;
     width: 40px;
     height: 290px;
     background-color: #DC0A2D;
@@ -918,7 +1075,6 @@ Animation
 }
 
 .pokedex-divisor-bottom {
-    display: relative;
     width: 40px;
     height: 40px;
     background-color: #DC0A2D;
@@ -958,5 +1114,11 @@ Animation
 }
 
 @media (max-width: 768px) {
-    
+    .screen {
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        height: 750px;
+        width: 700px;
+    }
 }

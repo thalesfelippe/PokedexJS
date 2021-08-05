@@ -43,7 +43,10 @@
                                 <div class="display-pokes-head">
                                     <i class="fas fa-battery-half"></i>
                                 </div>
-                                    <img src="./images/teste-dex.png">
+                                    <div class="display-pokemon hide">
+                                        <img src="" class="poke-image" alt="front">
+                                        <span class="poke-name"></span>
+                                    </div>
                                 </i></div>
                             <div class="display-bottom">
                                 <div class="display-bigdots"></div>
@@ -61,7 +64,7 @@
                             <div class="black-bar"></div>
                         </div>
                         <div class="bottom-screen">
-                            <span>no.25</span>
+                            <span class="poke-id"></span>
                         </div>
                     </div>
                     <div class="bottom-controls">
@@ -104,14 +107,47 @@
                 </div>
                 <div class="rightside-top-mid">
                     <div class="rightside-top-mid-border">
-                        <div class="rightside-screen"></div>
+                        <div class="rightside-screen">
+                            <div class="poke-stats">
+                                <p class="stats-hp">
+                                    hp: <span class="poke-hp"></span>
+                                </p>
+                                <p class="stats-attack">
+                                    attack: <span class="poke-attack"></span>
+                                </p>
+                            </div>
+                            <div class="poke-stats">
+                                <p class="stats-defense">
+                                    defense: <span class="poke-defense"></span>
+                                </p>
+                                <p class="stats-special-attack">
+                                    special: <span class="poke-special-attack"></span>
+                                </p>
+                            </div>
+                            <!-- <div class="poke-attacks">
+                                <p class="skill-one">
+                                    skill: <span class="poke-skill-one"></span>
+                                </p>
+                                <p class="skill-two">
+                                    skill: <span class="poke-skill-two"></span>
+                                </p>
+                            </div>
+                            <div class="poke-attacks">
+                                <p class="skill-three">
+                                    skill: <span class="poke-skill-three"></span>
+                                </p>
+                                <p class="skill-four">
+                                    skill: <span class="poke-skill-four"></span>
+                                </p>
+                            </div> -->
+                        </div>
                     </div>
                 </div>
                 <div class="rightside-center">
                     <div class="rightside-center-border">
                         <div class="rightside-bluebutton">
-                            <div class="btn-blue" style="border-radius: 10% 0 0 0;"><i class="fas fa-play"></i></div>
-                            <div class="btn-blue"><i class="fas fa-power-off"></i></div>
+                            <div class="btn-blue" style="border-radius: 10% 0 0 0;"><i class="fas fa-info-circle"></i></div>
+                            <div class="btn-blue"><i class="fas fa-book"></i></div>
                             <div class="btn-blue"><i class="fab fa-linkedin-in"></i></div>
                             <div class="btn-blue"><i class="fab fa-github"></i></div>
                             <div class="btn-blue" style="border-radius: 0 10% 0 0;"><i class="fas fa-envelope"></i></div>
@@ -140,9 +176,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="sound-controls">
-                            <div class="sound-bars"></div>
-                            <div class="sound-bars"></div>
+                        <div class="element-controls">
+                            <div class="element-bars">
+                                <span class="poke-type-one"></span>
+                            </div>
+                            <div class="element-bars">
+                                <span class="poke-type-two"></span>
+                            </div>
                         </div>
                     </div> 
                 </div>
