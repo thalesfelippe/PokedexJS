@@ -92,14 +92,24 @@ body {
     display: none;
 }
 
+.show {
+    display: flex;
+}
+
 /********************************
 JS INFORMATION
 *********************************/
 .display-pokemon {
     text-align: center;
+    user-select: none !important;
+}
+
+.display-pokemon img{
+    user-select: none !important;
 }
 
 .poke-image {
+    user-select: none !important;
     display: flex;
     text-align: center;
     margin-left: auto;
@@ -115,29 +125,48 @@ JS INFORMATION
     text-transform: capitalize;
 }
 
-.poke-stats,
-.poke-attacks {
+.poke-stats {
     font-weight: 400;
     color: #999;
     margin-top: 5px;
     margin-left: 10px;
-    margin-right: 20px;
+    margin-right: 10px;
     text-transform: capitalize;
     display: flex;
     flex-direction: column;
 }
 
-.poke-stats span,
-.poke-attacks span {
+.poke-stats span {
     font-weight: bold;
     color: #FFF;
+    font-size: 14px;
 }
 
 .stats-hp,
-.stats-defense,
+.stats-defense {
+    margin-bottom: 7px;
+}
+
+.poke-attacks {
+    font-weight: 400;
+    color: #999;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+}
+
+.poke-attacks span {
+    font-weight: bold;
+    color: #FFF;
+    font-size: 9px;
+}
+
 .skill-one,
 .skill-three {
-    margin-bottom: 7px;
+    margin-bottom: 5px;
 }
 
 .poke-id {
@@ -428,6 +457,7 @@ Animation
 }
 
 .display-pokes-head i {
+    user-select: none;
     color: #FFF;
     display: flex;
     justify-content: flex-end;
@@ -772,9 +802,12 @@ Animation
     z-index: 99;
 }
 
+.screen-box {
+    display: flex;
+}
+
 .rightside-screen span {
     margin: auto;
-    font-size: 10px;
 }
 
 /* RIGHTSIDE-TOP */

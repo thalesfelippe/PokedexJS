@@ -71,8 +71,8 @@
                         <div class="pad-controls">
                             <div class="control-top"><i class="fas fa-caret-up"></i></div>
                             <div class="control-bottom"><i class="fas fa-caret-down"></i></div>
-                            <div class="control-center"><i class="fas fa-circle"></i></div>
-                            <div class="control-right"><i class="fas fa-caret-right"></i></div>
+                            <div class="control-center"onclick="previous()"><i class="fas fa-circle"></i></div>
+                            <div class="control-right" onclick="next()"><i class="fas fa-caret-right"></i></div>
                             <div class="control-left"><i class="fas fa-caret-left"></i></div>
                         </div> 
                     </div>
@@ -108,46 +108,53 @@
                 <div class="rightside-top-mid">
                     <div class="rightside-top-mid-border">
                         <div class="rightside-screen">
-                            <div class="poke-stats">
-                                <p class="stats-hp">
-                                    hp: <span class="poke-hp"></span>
-                                </p>
-                                <p class="stats-attack">
-                                    attack: <span class="poke-attack"></span>
-                                </p>
+
+                            <div id="stats-info" class="show">
+                                <div class="poke-stats">
+                                    <p class="stats-hp">
+                                        hp: <span class="poke-hp"></span>
+                                    </p>
+                                    <p class="stats-attack">
+                                        attack: <span class="poke-attack"></span>
+                                    </p>
+                                </div>
+                                <div class="poke-stats">
+                                    <p class="stats-defense">
+                                        defense: <span class="poke-defense"></span>
+                                    </p>
+                                    <p class="stats-special-attack">
+                                        special: <span class="poke-special-attack"></span>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="poke-stats">
-                                <p class="stats-defense">
-                                    defense: <span class="poke-defense"></span>
-                                </p>
-                                <p class="stats-special-attack">
-                                    special: <span class="poke-special-attack"></span>
-                                </p>
+
+                            <div id="attacks-book" class="hide">
+                                <div class="poke-attacks">
+                                    <p class="skill-one">
+                                        skill: <span class="poke-skill-one"></span>
+                                    </p>
+                                    <p class="skill-two">
+                                        skill: <span class="poke-skill-two"></span>
+                                    </p>
+                                </div>
+                                <div class="poke-attacks">
+                                    <p class="skill-three">
+                                        skill: <span class="poke-skill-three"></span>
+                                    </p>
+                                    <p class="skill-four">
+                                        skill: <span class="poke-skill-four"></span>
+                                    </p>
+                                </div>
                             </div>
-                            <!-- <div class="poke-attacks">
-                                <p class="skill-one">
-                                    skill: <span class="poke-skill-one"></span>
-                                </p>
-                                <p class="skill-two">
-                                    skill: <span class="poke-skill-two"></span>
-                                </p>
-                            </div>
-                            <div class="poke-attacks">
-                                <p class="skill-three">
-                                    skill: <span class="poke-skill-three"></span>
-                                </p>
-                                <p class="skill-four">
-                                    skill: <span class="poke-skill-four"></span>
-                                </p>
-                            </div> -->
+
                         </div>
                     </div>
                 </div>
                 <div class="rightside-center">
                     <div class="rightside-center-border">
                         <div class="rightside-bluebutton">
-                            <div class="btn-blue" style="border-radius: 10% 0 0 0;"><i class="fas fa-info-circle"></i></div>
-                            <div class="btn-blue"><i class="fas fa-book"></i></div>
+                            <div onclick="showStats()" class="btn-blue" style="border-radius: 10% 0 0 0;"><i class="fas fa-info-circle"></i></div>
+                            <div onclick="showSkills()" class="btn-blue"><i class="fas fa-book"></i></div>
                             <div class="btn-blue"><i class="fab fa-linkedin-in"></i></div>
                             <div class="btn-blue"><i class="fab fa-github"></i></div>
                             <div class="btn-blue" style="border-radius: 0 10% 0 0;"><i class="fas fa-envelope"></i></div>
