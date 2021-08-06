@@ -34,7 +34,7 @@
  - ![JavaScript](https://img.shields.io/badge/-JavaScript-F7B93E?style=flat-square&logo=javascript&logoColor=fff)
  - <img 
     src="https://cdn.icon-icons.com/icons2/851/PNG/512/Pokeball_icon-icons.com_67533.png"
-  width="20"/><a href="https://thalesfelippe.github.io/PokedexJS/" target="_blank">Poke Api</a>
+  width="20"/><a href="https://pokeapi.co/" target="_blank">Poke Api</a>
 
 ## 👨‍💻 How to Setup
 
