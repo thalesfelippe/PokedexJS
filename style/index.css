@@ -177,7 +177,7 @@ Login
     flex: 20%;
     width: 400px;
     background-color: #2D9CDB;
-    padding: 35px;
+    padding: 25px;
     border-left: 2px solid #63a37f;
     display: none;
 }
@@ -194,8 +194,8 @@ Login
     width: 200px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 70px;
+    margin-bottom: 30px;
     padding: 0;
 }
 
@@ -330,7 +330,7 @@ Cadastro
     display: flex;
     flex: 20%;
     background-color: #63a37f;
-    padding: 35px;
+    padding: 25px;
     border-left: 2px solid #2D9CDB;
     flex-direction: column;
 }
@@ -347,8 +347,8 @@ Cadastro
     width: 200px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     padding: 0;
 }
 
@@ -471,6 +471,42 @@ Cadastro
     margin-right: 10px;
     border-radius: 0px 0px 20px 20px;
     text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .rightside-cadastro {
+        flex: 20%;
+    }
+
+    .rightside-login {
+        flex: 20%;
+    }
+
+    .rightside-load {
+        flex: 20%;
+    }
+
+    .leftside {
+        flex: 60%;
+    }
+}
+
+@media (max-width: 992px) {
+    .rightside-cadastro {
+        flex: 40%;
+    }
+
+    .rightside-login {
+        flex: 40%;
+    }
+
+    .rightside-load {
+        flex: 40%;
+    }
+
+    .leftside {
+        flex: 50%;
+    }
 }
 
 @media (max-width: 768px) {

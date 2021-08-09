@@ -29,26 +29,17 @@
             <img src="./images/logo.png">
             <h1>Crie uma conta</h1>
 
-            <form method="POST" action="cadastro.php" class="pokevalidator">
+            <form name="register" method="POST" action="cadastro.html" class="pokevalidator">
                 <label>
                     Seu nome:<br>
-                    <!-- <div class="input-bar">
-                        <img src="./images/group.png">
-                    </div> -->
                     <input type="text" name="name" placeholder="Nome" data-rules="required,min=4">
                 </label>
                 <label>
                     Seu e-mail:<br>
-                    <!-- <div class="input-bar">
-                        <img src="./images/group.png">
-                    </div> -->
                     <input type="text" name="email" placeholder="E-mail" data-rules="required,email">
                 </label>
                 <label>
                     Sua senha:<br>
-                    <!-- <div class="input-bar">
-                        <img src="./images/group.png">
-                    </div> -->
                     <input type="password" name="password" placeholder="Senha" data-rules="required,min=6">
                 </label>
                 <label>
@@ -67,19 +58,13 @@
             <img src="./images/logo.png">
             <h1>Faça login</h1>
 
-            <form method="GET" action="pokedex.html" class="pokevalidator">
+            <form name="login" method="GET" action="pokedex.html" class="pokevalidator">
                 <label>
                     Seu e-mail:<br>
-                    <!-- <div class="input-bar">
-                        <img src="./images/group.png">
-                    </div> -->
                     <input type="text" name="email" placeholder="E-mail" data-rules="required,email">
                 </label>
                 <label>
                     Sua senha:<br>
-                    <!-- <div class="input-bar">
-                        <img src="./images/group.png">
-                    </div> -->
                     <input type="password" name="password" placeholder="Senha" data-rules="required,min=6">
                 </label>
                 <label>
