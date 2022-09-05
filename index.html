@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Pokedex - Home</title>
+    <title>Virtual Pokedex</title>
     <link rel="icon" href="./images/favicon.png"/>
     <link rel="stylesheet" href="./style/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,55 +17,26 @@
                 <div class="slider-control" onclick="goNext();"><i class="fas fa-arrow-alt-circle-right"></i></div>
             </div>
             <div class="poke-slider">
-                <div class="slider-item" style="background-image: url('images/pokeslide1.png')"></div>
-                <div class="slider-item" style="background-image: url('images/pokeslide2.png')"></div>
-                <div class="slider-item" style="background-image: url('images/pokeslide3.png')"></div>
-                <div class="slider-item" style="background-image: url('images/pokeslide4.png')"></div>
-                <div class="slider-item" style="background-image: url('images/pokeslide5.png')"></div>
-            </div>
-        </div>
-
-        <div id="cadastro" class="rightside-cadastro">
-            <img src="./images/logo.png">
-            <h1>Crie uma conta</h1>
-
-            <form name="register" method="POST" action="cadastro.html" class="pokevalidator">
-                <label>
-                    Seu nome:<br>
-                    <input type="text" name="name" placeholder="Nome" data-rules="required,min=4">
-                </label>
-                <label>
-                    Seu e-mail:<br>
-                    <input type="text" name="email" placeholder="E-mail" data-rules="required,email">
-                </label>
-                <label>
-                    Sua senha:<br>
-                    <input type="password" name="password" placeholder="Senha" data-rules="required,min=6">
-                </label>
-                <label>
-                    <div class="input-button btn-cadastro">
-                        <input type="submit" value="Cadastrar" style="cursor: pointer;">
-                        <img src="./images/pokeball.png">
-                    </div>
-                </label>
-            </form>
-            <div class="input-login">
-                <p>Já tem uma conta? <a href="#" onclick="exibeLogin()">Faça login</a></p>
+                <div class="slider-item" style="background-image: url('images/pokeslide1.svg')"></div>
+                <div class="slider-item" style="background-image: url('images/pokeslide2.svg')"></div>
+                <div class="slider-item" style="background-image: url('images/pokeslide3.svg')"></div>
+                <div class="slider-item" style="background-image: url('images/pokeslide4.svg')"></div>
+                <div class="slider-item" style="background-image: url('images/pokeslide5.svg')"></div>
             </div>
         </div>
 
         <div id="login" class="rightside-login">
             <img src="./images/logo.png">
-            <h1>Faça login</h1>
+            <h1>Login</h1>
 
             <form name="login" method="GET" action="pokedex.html" class="pokevalidator">
                 <label>
-                    Seu e-mail:<br>
+                    E-mail:<br>
                     <input type="text" name="email" placeholder="E-mail" data-rules="required,email">
                 </label>
                 <label>
-                    Sua senha:<br>
-                    <input type="password" name="password" placeholder="Senha" data-rules="required,min=6">
+                    Password:<br>
+                    <input type="password" name="password" placeholder="Password" data-rules="required,min=6">
                 </label>
                 <label>
                     <div class="input-button btn-login">
@@ -75,7 +46,36 @@
                 </label>
             </form>
             <div class="input-login">
-                <p>Não tem uma conta? <a href="#" onclick="exibeCadastro()">Cadastre-se</a></p>
+                <p>Don't have an account? <a href="#" onclick="exibeCadastro()">Register</a></p>
+            </div>
+        </div>
+
+        <div id="cadastro" class="rightside-cadastro">
+            <img src="./images/logo.png">
+            <h1>Create Account</h1>
+
+            <form name="register" method="" action="" class="pokevalidator">
+                <label>
+                    Your name:<br>
+                    <input type="text" name="name" placeholder="Name" data-rules="required,min=4">
+                </label>
+                <label>
+                    E-mail:<br>
+                    <input type="text" name="email" placeholder="E-mail" data-rules="required,email">
+                </label>
+                <label>
+                    Password:<br>
+                    <input type="password" name="password" placeholder="Password" data-rules="required,min=6">
+                </label>
+                <label>
+                    <div class="input-button btn-cadastro">
+                        <input type="submit" value="Cadastrar" style="cursor: pointer;">
+                        <img src="./images/pokeball.png">
+                    </div>
+                </label>
+            </form>
+            <div class="input-login">
+                <p>Already have an account? <a href="#" onclick="exibeLogin()">Login</a></p>
             </div>
         </div>
 

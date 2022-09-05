@@ -20,8 +20,7 @@ const pokeSkillFour = document.querySelector('.poke-skill-four');
 const leftButton = document.querySelector('.control-left');
 const rightButton = document.querySelector('.control-right');
 
-console.log(leftButton);
-console.log(rightButton);
+let searchPokemon = 1;
 
 // Const/Variables 
 const TYPES = [
@@ -56,22 +55,18 @@ function showSkills(){
     element.classList.add("show");
 }
 
+const fetchPokemon = async (pokemon) => {
 
-function nextPoke() {
-
+    const fetchResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
+    const data = await fetchResponse.json();
+    return data;
 }
 
-function prevPoke() {
+const renderPokemon = async (pokemon) => {
 
-}
+    const data = await fetchPokemon(pokemon);
 
-// Pokemon Data
-// const fetchPokeData = id => {
-    fetch('https://pokeapi.co/api/v2/pokemon/1')
-    .then(res => res.json())
-    .then(data => {
-        console.log(data);
-
+    if (data) {
         const dataTypes = data['types'];
         const dataFirstType = dataTypes[0];
         const dataSecondType = dataTypes[1];
@@ -98,15 +93,20 @@ function prevPoke() {
         pokeASkillThree.textContent = data['moves']['2']['move']['name'];
         pokeSkillFour.textContent = data['moves']['3']['move']['name'];
         attacksScreen.classList.add('hide');
-        pokeImage.src = data['sprites']['other']['dream_world']['front_default'] || data['sprites']['front_default'];
-});
-// }
+        pokeImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'] || data['sprites']['front_default'];
+    }
+}
 
-// get data for pokemons
-fetch('https://pokeapi.co/api/v2/pokemon?limit=20&offset=0')
-    .then(res => res.json())
-    .then(data => {
-        console.log(data);
-    const { results } = data;
-        console.log(results);
+rightButton.addEventListener('click', () => {
+    searchPokemon += 1;
+    renderPokemon(searchPokemon);
 });
+
+leftButton.addEventListener('click', () => {
+    if (searchPokemon > 1) {
+        searchPokemon -= 1;
+        renderPokemon(searchPokemon);
+    }
+});
+
+renderPokemon(searchPokemon);
