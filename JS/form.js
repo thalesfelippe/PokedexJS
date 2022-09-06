@@ -1,4 +1,3 @@
-// Login screen
 function exibeLogin(){
     var div = document.getElementById("load-pokeball");
     div.style.display = "flex";
@@ -10,7 +9,6 @@ function exibeLogin(){
     div.style.display = "none";
     }
 
-// Register screen
 function exibeCadastro(){
     var div = document.getElementById("load-pokeball");
     div.style.display = "flex";
@@ -22,7 +20,7 @@ function exibeCadastro(){
     div.style.display = "none";
     }
 
-// Validation Cadastro
+    
 var PokeValidator = {
   handleSubmit:(event) => {
       event.preventDefault();
@@ -55,13 +53,13 @@ var PokeValidator = {
               switch(rDetails[0]) {
                   case 'required':
                       if(input.value == '') {
-                          return 'Este campo não pode ser vazio.';
+                          return 'This field cannot be empty.';
                       }
                       break;
 
                   case 'min':
                       if(input.value.length < rDetails[1]) {
-                          return 'Este campo tem que ter '+rDetails[1]+' caracteres';
+                          return 'This field must have '+rDetails[1]+' characters';
                       }
                       break;
 
@@ -69,7 +67,7 @@ var PokeValidator = {
                       if(input.value != '') {
                           var regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
                           if(!regex.test(input.value.toLowerCase())) {
-                              return 'Este e-mail não e válido.';
+                              return 'This email is not valid.';
                           }
                       }
                       break;
