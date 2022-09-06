@@ -99,5 +99,5 @@ var PokeValidator = {
   }
 };
 
-var form = document.querySelector('.pokevalidator');
+var form = document.querySelector('#pokevalidator');
 form.addEventListener('submit',PokeValidator.handleSubmit);
