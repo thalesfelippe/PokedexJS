@@ -89,10 +89,15 @@ body {
 /* POKEMON-BG-TYPES */
 
 .hide {
-    display: none;
+    display: none !important;
+    background-color: #2B2B2B;
 }
 
 .show {
+    display: flex;
+}
+
+#stats-info {
     display: flex;
 }
 

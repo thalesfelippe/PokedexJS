@@ -32,6 +32,13 @@ const TYPES = [
     'dragon', 'psychic', 'ice'
 ];
 
+const resetScreen = () => {
+    for (const type of TYPES) {
+        pokeTypeBgOne.classList.remove(type);
+        pokeTypeBgTwo.classList.remove(type);
+    }
+}
+
 // Functions
 function showStats(){
     var element = document.getElementById("attacks-book");
@@ -67,6 +74,9 @@ const renderPokemon = async (pokemon) => {
     const data = await fetchPokemon(pokemon);
 
     if (data) {
+
+        resetScreen();
+
         const dataTypes = data['types'];
         const dataFirstType = dataTypes[0];
         const dataSecondType = dataTypes[1];
@@ -80,8 +90,10 @@ const renderPokemon = async (pokemon) => {
             pokeTypeTwo.textContent = '';
         }
         pokeTypeBgOne.classList.add(dataFirstType['type']['name']);
+        
         mainScreen.classList.remove('hide');
         pokeName.textContent = data['name'];
+        pokeImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'] || data['sprites']['front_default'];
         pokeId.textContent = 'Nº ' + data['id'].toString().padStart(3, '0');
         pokeHp.textContent = data['stats']['0']['base_stat'];
         pokeDefense.textContent = data['stats']['2']['base_stat'];
@@ -93,7 +105,6 @@ const renderPokemon = async (pokemon) => {
         pokeASkillThree.textContent = data['moves']['2']['move']['name'];
         pokeSkillFour.textContent = data['moves']['3']['move']['name'];
         attacksScreen.classList.add('hide');
-        pokeImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'] || data['sprites']['front_default'];
     }
 }
 
