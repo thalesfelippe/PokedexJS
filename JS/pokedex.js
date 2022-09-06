@@ -1,4 +1,3 @@
-// DOM Objects
 const mainScreen = document.querySelector('.display-pokemon');
 const statsScreen = document.getElementById('stats-info');
 const attacksScreen = document.getElementById('attacks-book');
@@ -20,9 +19,12 @@ const pokeSkillFour = document.querySelector('.poke-skill-four');
 const leftButton = document.querySelector('.control-left');
 const rightButton = document.querySelector('.control-right');
 
+const reloadPage = () => {
+    window.location.reload();
+}
+
 let searchPokemon = 1;
 
-// Const/Variables 
 const TYPES = [
     'normal', 'fighting', 'flying',
     'poison', 'ground', 'rock',
@@ -39,7 +41,6 @@ const resetScreen = () => {
     }
 }
 
-// Functions
 function showStats(){
     var element = document.getElementById("attacks-book");
     element.classList.add("hide");
