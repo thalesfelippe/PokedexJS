@@ -18,9 +18,11 @@ const pokeASkillThree = document.querySelector('.poke-skill-three');
 const pokeSkillFour = document.querySelector('.poke-skill-four');
 const leftButton = document.querySelector('.control-left');
 const rightButton = document.querySelector('.control-right');
+const soundtrack = document.getElementById('soundtrack');
 
 const reloadPage = () => {
     window.location.reload();
+    soundtrack.currentTime = 0;
 }
 
 let searchPokemon = 1;

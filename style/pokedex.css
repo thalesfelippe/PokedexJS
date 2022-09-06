@@ -1075,11 +1075,11 @@ Animation
 }
 
 .backbtn:active i {
-    color: #FFD00B;
+    color: #03A64A;
 }
 
 .verify:active i {
-    color: #03A64A;
+    color: #FFD00B;
 }
 
 .yellowdot {
