@@ -1,27 +1,21 @@
+
 <h1 align="center">
-  <img 
-    src="https://cdn.icon-icons.com/icons2/851/PNG/512/Pokeball_icon-icons.com_67533.png"
-  width="70"/>
   <p>Pokedex JS</p>
 </h1>
 
 <h1 align="center">
-<img src="https://i.imgur.com/hxv9tj8.png"
+<img src="https://i.imgur.com/CvqKfr2.png"
   />
-  <img src="https://i.imgur.com/hQCydfi.png"
+  <img src="https://i.imgur.com/8WxjXZl.png"
   />
-  <img src="https://i.imgur.com/Vh9xY2S.png"
+  <img src="https://i.imgur.com/A7zfsBm.png"
   />
-  <img src="https://i.imgur.com/W5dX0Au.png"
-  />
-  <img src="https://i.imgur.com/L1JuKG3.png"
-  />
-  <img src="https://i.imgur.com/tUfltkB.png"
+  <img src="https://i.imgur.com/ds5WJqw.png"
   />
 </h1>
 
 <h2 align="center">
-  <a href="https://thalesfelippe.github.io/PokedexJS/" target="_blank">See the site || Click login button to see the Pokedex</a>
+  <a href="https://thalesfelippe.github.io/PokedexJS/" target="_blank">See the site || Click on login see the Pokedex</a>
 </h2>
 
 ## 🧾 About
@@ -34,7 +28,7 @@
  - ![JavaScript](https://img.shields.io/badge/-JavaScript-F7B93E?style=flat-square&logo=javascript&logoColor=fff)
  - <img 
     src="https://cdn.icon-icons.com/icons2/851/PNG/512/Pokeball_icon-icons.com_67533.png"
-  width="20"/><a href="https://pokeapi.co/" target="_blank">Poke Api</a>
+  width="20"/><a href="https://pokeapi.co/" target="_blank"> Poke Api</a>
 
 ## 👨‍💻 How to Setup
 
