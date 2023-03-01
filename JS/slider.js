@@ -1,12 +1,13 @@
 let totalSlides = document.querySelectorAll('.slider-item').length;
 let currentSlide = 0;
 
+let slider = document.querySelector('.poke-slider');
 let sliderWidth = document.querySelector('.leftside').clientWidth;
+slider.style.width = `${sliderWidth * totalSlides}px`;
 
-document.querySelector('.poke-slider').style.width = `${sliderWidth * totalSlides}px`;
-
-document.querySelector('.slider-controls').style.width = `${sliderWidth}px`;
-document.querySelector('.slider-controls').style.height = `${document.querySelector('.leftside').clientHeight}px`;
+let controls = document.querySelector('.slider-controls');
+controls.style.width = `${sliderWidth}px`;
+controls.style.height = `${document.querySelector('.leftside').clientHeight}px`;
 
 function goPrevious(){
   currentSlide--;
@@ -27,7 +28,16 @@ function goNext(){
 function updateMargin(){
   let sliderItemWidth = document.querySelector('.slider-item').clientWidth;
   let newMargin = (currentSlide * sliderItemWidth);
-  document.querySelector('.poke-slider').style.marginLeft = `-${newMargin}px`;
+  slider.style.marginLeft = `-${newMargin}px`;
 }
+
+// adiciona um event listener que escuta o evento resize no objeto window
+window.addEventListener('resize', function() {
+  // atualiza a largura do slider e da área de controle
+  sliderWidth = document.querySelector('.leftside').clientWidth;
+  slider.style.width = `${sliderWidth * totalSlides}px`;
+  controls.style.width = `${sliderWidth}px`;
+  controls.style.height = `${document.querySelector('.leftside').clientHeight}px`;
+});
 
 setInterval(goNext, 5000);
