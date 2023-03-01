@@ -15,7 +15,7 @@
 </h1>
 
 <h2 align="center">
-  <a href="https://thalesfelippe.github.io/PokedexJS/" target="_blank">See the site || Click on login see the Pokedex</a>
+  <a href="https://thalesfelippe.github.io/PokedexJS/" target="_blank">See the site</a>
 </h2>
 
 ## 🧾 About
