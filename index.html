@@ -13,8 +13,12 @@
     <div class="screen">
         <div class="leftside">
             <div class="slider-controls">
-                <div class="slider-control" onclick="goPrevious();"><i class="fas fa-arrow-alt-circle-left"></i></div>
-                <div class="slider-control" onclick="goNext();"><i class="fas fa-arrow-alt-circle-right"></i></div>
+                <div class="slider-control" onclick="goPrevious();" aria-label="Slide anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="slider-control" onclick="goNext();" aria-label="Próximo slide">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
             </div>
             <div class="poke-slider">
                 <div class="slider-item" style="background-image: url('images/pokeslide1.svg')"></div>
@@ -23,6 +27,7 @@
                 <div class="slider-item" style="background-image: url('images/pokeslide4.svg')"></div>
                 <div class="slider-item" style="background-image: url('images/pokeslide5.svg')"></div>
             </div>
+            <div class="slider-indicators"></div>
         </div>
 
         <div id="login" class="rightside-login">
@@ -30,29 +35,22 @@
             <h1>Login</h1>
 
             <form name="login" method="GET" action="pokedex.html" id="login-form">
-                <label>
-                    E-mail:<br>
-                    <input 
-                    type="text" 
-                    name="email" 
-                    placeholder="E-mail" 
-                    data-rules="required,email">
-                </label>
-                <label>
-                    Password:<br>
-                    <input 
-                    type="password" 
-                    name="password" 
-                    placeholder="Password" 
-                    data-rules="required,min=6">
-                </label>
+                <div class="input-group">
+                    <input type="text" name="email" id="login-email" required autocomplete="off" placeholder=" " />
+                    <label for="login-email">E-mail</label>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" id="login-password" required minlength="6" placeholder=" " />
+                    <label for="login-password">Password</label>
+                    <i class="fas fa-lock"></i>
+                </div>
                 <label>
                     <div class="input-button btn-login">
-                        <input 
-                        type="submit" 
-                        value="Login"
-                        style="cursor: pointer;">
-                        <img src="./images/pokeball.png">
+                        <button type="submit">
+                            Login
+                            <img src="./images/pokeball.png" alt="pokeball">
+                        </button>
                     </div>
                 </label>
             </form>
@@ -66,37 +64,27 @@
             <h1>Create Account</h1>
 
             <form name="register" method="GET" action="pokedex.html" id="register-form">
-                <label>
-                    Your name:<br>
-                    <input 
-                    type="text" 
-                    name="name" 
-                    placeholder="Name" 
-                    data-rules="required,min=4">
-                </label>
-                <label>
-                    E-mail:<br>
-                    <input 
-                    type="text" 
-                    name="email" 
-                    placeholder="E-mail" 
-                    data-rules="required,email">
-                </label>
-                <label>
-                    Password:<br>
-                    <input 
-                    type="password" 
-                    name="password" 
-                    placeholder="Password" 
-                    data-rules="required,min=6">
-                </label>
+                <div class="input-group">
+                    <input type="text" name="name" id="register-name" required minlength="4" placeholder=" " />
+                    <label for="register-name">Your name</label>
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="email" id="register-email" required autocomplete="off" placeholder=" " />
+                    <label for="register-email">E-mail</label>
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" id="register-password" required minlength="6" placeholder=" " />
+                    <label for="register-password">Password</label>
+                    <i class="fas fa-lock"></i>
+                </div>
                 <label>
                     <div class="input-button btn-cadastro">
-                        <input 
-                        type="submit" 
-                        value="register"
-                        style="cursor: pointer;">
-                        <img src="./images/pokeball.png">
+                        <button type="submit">
+                            Register
+                            <img src="./images/pokeball.png" alt="pokeball">
+                        </button>
                     </div>
                 </label>
             </form>
