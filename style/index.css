@@ -15,80 +15,90 @@ Animation
 
 @keyframes rotate {
     0% {
-    transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     50% {
-    transform: rotate(180deg);
+        transform: rotate(180deg);
     }
+
     100% {
-    transform: rotate(360deg);
+        transform: rotate(360deg);
     }
 }
 
 @keyframes scale {
     0% {
-    transform: scale(1);
+        transform: scale(1);
     }
+
     50% {
-    transform: scale(1.2);
+        transform: scale(1.2);
     }
+
     100% {
-    transform: scale(1);
+        transform: scale(1);
     }
 }
 
 @keyframes rotate-load {
-    0%{
+    0% {
         transform: rotate(0deg);
     }
-    50%{
+
+    50% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
 
 @keyframes rotate-center {
     0% {
-    transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     50% {
-    transform: rotate(360deg);
+        transform: rotate(360deg);
     }
+
     100% {
-    transform: rotate(0deg);
+        transform: rotate(0deg);
     }
 }
 
 @keyframes slideleft {
-    0%{
+    0% {
         transform: translateX(0px) rotate(0deg);
     }
-    25%{
+
+    25% {
         transform: translateX(85px) rotate(360deg);
     }
-    50%{
-        transform: translateX(0px) rotate(0deg) ;
-    }
-    100%{
 
+    50% {
+        transform: translateX(0px) rotate(0deg);
     }
+
+    100% {}
 }
 
 @keyframes slideright {
-    0%{
+    0% {
         transform: translateX(0px) rotate(0deg);
     }
-    25%{
+
+    25% {
         transform: translateX(-85px) rotate(360deg);
     }
-    50%{
-        transform: translateX(0px) rotate(0deg) ;
-    }
-    100%{
 
+    50% {
+        transform: translateX(0px) rotate(0deg);
     }
+
+    100% {}
 }
 
 /********************************
@@ -110,63 +120,284 @@ Poke-Slider
     height: 100vh;
     overflow: hidden;
     border-right: 1px solid #000;
+    background: linear-gradient(120deg, #e0f7fa 0%, #63a37f1a 100%);
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
 .poke-slider {
-    height: 100%;
     display: flex;
-    transition: all 1s ease;
+    align-items: center;
+    height: 550px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 150px;
+    transition: margin-left 0.7s cubic-bezier(.4, 1.6, .3, 1);
+    will-change: margin-left;
+    position: relative;
+    z-index: 1;
 }
 
 .slider-item {
-    width: 100vw;
-    height: inherit;
+    min-width: 60vw;
+    max-width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 32px;
     background-position: center;
     background-size: cover !important;
+    box-shadow: 0 10px 32px 0 rgba(45, 156, 219, 0.10), 0 1.5px 4px 0 rgba(0, 0, 0, 0.07);
+    transition: transform .33s cubic-bezier(.43, 1.9, .32, 1.1), box-shadow .32s;
+    cursor: grab;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.slider-item:hover,
+.slider-item:focus {
+    transform: scale(1.045) rotate(-1deg);
+    box-shadow: 0 14px 36px 0 rgba(99, 163, 127, 0.13), 0 2px 12px 0 rgba(255, 208, 11, 0.13);
+    z-index: 3;
 }
 
 .slider-controls {
     position: absolute;
-    z-index: 99;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 5;
     display: flex;
     justify-content: space-between;
-    flex: 60%;
     align-items: center;
+    width: 99%;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
 .slider-control {
-    background-color: transparent;
-    border-radius: 0%;
-    overflow: hidden;
+    background: rgba(255, 255, 255, 0.93);
+    border-radius: 50%;
+    box-shadow: 0 2px 10px #3331, 0 0px 2px #FFD00B44;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
     cursor: pointer;
+    transition: box-shadow .18s, transform .16s;
+    margin: 0 6px;
 }
 
 .slider-control i {
-    border-radius: 100%;
-    color: #FFD00B;
-    background-color: #FFF;
-    font-size: 30px;
-    margin-top: 2px;
-    transition: all 0.3s ease
+    font-size: 2.1rem;
+    color: #63A37F;
+    transition: color 0.22s;
+}
+
+.slider-control:hover {
+    box-shadow: 0 6px 20px #FFD00B33, 0 0px 2px #63A37F44;
+    transform: scale(1.1);
 }
 
 .slider-control:hover i {
-    color: #FF9C0D;
-    background-color: rgb(214, 214, 214);
-    box-shadow: 1px 1px 2px #000;
+    color: #FFD00B;
 }
 
-.slider-control .fa-arrow-alt-circle-left {
-    margin-left: 10px;
+.slider-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+    gap: 12px;
+    z-index: 5;
+    position: relative;
 }
 
-.slider-control .fa-arrow-alt-circle-right {
-    margin-right: 15px;
+.slider-indicators .dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #d2f3e4;
+    border: 2px solid #63A37F;
+    transition: background 0.22s, transform 0.19s;
+    cursor: pointer;
+}
+
+.slider-indicators .dot.active {
+    background: linear-gradient(90deg, #FFD00B 20%, #FF9C0D 80%);
+    border: 2.5px solid #FFD00B;
+    transform: scale(1.22);
+    box-shadow: 0 3px 8px #FFD00B33;
 }
 
 /********************************
 Poke-Slider
 *********************************/
+
+/********************************
+INPUT GROUP
+*********************************/
+
+.input-group {
+    position: relative;
+    margin: 24px 20px 32px 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 44px 14px 16px;
+    border-radius: 16px;
+    border: 1.5px solid #e0e7ef;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.25);
+    color: #222;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(35, 35, 35, 0.06);
+    outline: none;
+    font-family: inherit;
+}
+
+.input-group input:focus {
+    border: 1.5px solid #2D9CDB;
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4px 20px 0 rgba(45, 156, 219, 0.12);
+}
+
+.input-group label {
+    position: absolute;
+    left: 16px;
+    top: 13px;
+    padding: 0 4px;
+    color: #757575;
+    font-size: 1rem;
+    background: transparent;
+    pointer-events: none;
+    transition: all 0.15s;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.input-group input:focus+label,
+.input-group input:not(:placeholder-shown)+label {
+    top: -11px;
+    left: 10px;
+    font-size: 0.82rem;
+    background: #2D9CDB;
+    color: #fff;
+    padding: 0 7px;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.04);
+}
+
+.input-group i {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    color: #2D9CDB;
+    font-size: 1.1rem;
+    opacity: 0.80;
+    transition: color 0.2s;
+    pointer-events: none;
+}
+
+.input-group input:focus~i {
+    color: #FF9C0D;
+}
+
+.input-button {
+    width: 100%;
+    margin: 0;
+    padding: 0px 20px 0px 20px;
+}
+
+.input-button button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    border-radius: 16px;
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #FFD00B 0%, #FF9C0D 100%);
+    color: #33363A;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 11px 14px 11px 20px;
+    box-shadow: 0 2px 16px 0 rgba(255, 200, 20, 0.09);
+    cursor: pointer;
+    transition:
+        background 0.2s,
+        color 0.2s,
+        box-shadow 0.22s,
+        transform 0.12s;
+    position: relative;
+    z-index: 2;
+    gap: 10px;
+    margin: 0 0 0 0;
+}
+
+.input-button button img {
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0 !important;
+    margin-left: 8px !important;
+    margin-right: 0 !important;
+    transition: transform .7s cubic-bezier(.4, 2.3, .3, .7);
+    z-index: 3 !important;
+    pointer-events: none;
+}
+
+.input-button button:hover {
+    background: linear-gradient(90deg, #FF9C0D 0%, #FFD00B 100%);
+    color: #fff;
+    box-shadow: 0 4px 28px 0 rgba(255, 156, 13, 0.19);
+    transform: translateY(-2px) scale(1.03);
+    text-shadow: 1px 1px 3px #33333344;
+}
+
+.input-button button:active {
+    background: #2D9CDB;
+    color: #fff;
+    transform: scale(0.98);
+    box-shadow: 0 2px 10px 0 rgba(45, 156, 219, 0.15);
+}
+
+.input-button button:hover img {
+    animation: rotate 1s linear;
+    border: 2px solid #FFF;
+    border-radius: 50%;
+}
+
+.input-button button:active img {
+    animation: scale 1s ease;
+    border: 2px solid #00FA6D;
+    border-radius: 50%;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.error {
+    font-size: 11px;
+    background-color: #FF0000;
+    color: #FFF;
+    padding: 4px;
+    margin-top: 0px;
+    margin-bottom: -5px;
+    margin-right: 10px;
+    border-radius: 0px 0px 20px 20px;
+    text-align: center;
+}
 
 /********************************
 Login
@@ -199,81 +430,33 @@ Login
     padding: 0;
 }
 
-/* .input-bar {
-    display: flex;
-    align-items: center;
-} */
-
-.rightside-login label {
-    display: block;
-    color: #FFF;
-    text-shadow: 1px 1px #222;
-    font-weight: bold;
-    margin: 0 20px 20px 20px;
+.rightside-login .input-group input {
+    border: 1.5px solid #e0e7ef;
+    background: rgba(255, 255, 255, 0.25);
 }
 
-/* .rightside-login .input-bar img {
-    display: inline-block !important;
-    margin-left: -10px !important;
-    width: 20px !important;
-    z-index: 99 !important;
-} */
-
-.rightside-login input {
-    width: 100%;
-    border: 1px solid #999;
-    box-shadow: 1px 1px #333;
-    border-radius: 5px;
-    padding: 8px;
-    font-size: 14px;
-    outline: 0;
-    margin-left: -5px;
+.rightside-login .input-group input:focus {
+    border: 1.5px solid #63A37F;
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4px 20px 0 rgba(99, 163, 127, 0.13);
 }
 
-.rightside-login input:focus {
-    border-top: 2px solid #63a37f;
-    border-right: 2px solid #63a37f;
-    border-left: 2px solid #63a37f;
-    border-bottom: 2px solid #63a37f;
+.rightside-login .input-group label {
+    background: transparent;
 }
 
-.input-button.btn-login input {
-    display: inline-block;
-    border-radius: 15px;
-    border: 1px solid #333 !important;
-    color: #33363A;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: bold;
-    transition: all .3s;
+.rightside-login .input-group input:focus+label,
+.rightside-login .input-group input:not(:placeholder-shown)+label {
+    background: #63A37F;
+    color: #fff;
 }
 
-.input-button.btn-login:hover input {
-    background-color: #FF9C0D;
-    color: #33363A;
-    text-shadow: 1px 1px #ddd;
-    box-shadow: 2px 2px 3px #FFD00B;
-    border: none !important;
+.rightside-login .input-group i {
+    color: #63A37F;
 }
 
-.input-button.btn-login:active input {
-    background-color: #0068FF;
-    color: #FFF;
-    text-shadow: 2px 2px #333;
-    box-shadow: 2px 2px 3px #005fb3;
-    border: none !important;
-}
-
-.input-button.btn-login:hover img {
-    animation: rotate 1s ease;
-    border: 2px solid #FFF;
-    border-radius: 50%;
-}
-
-.input-button.btn-login:active img {
-    animation: scale 1s ease;
-    border: 2px solid #00FA6D;
-    border-radius: 50%;
+.rightside-login .input-group input:focus~i {
+    color: #FFD00B;
 }
 
 /********************************
@@ -302,18 +485,19 @@ Load screen
 .pokeball-transition img {
     width: 50px;
 }
+
 .circle {
     position: relative;
     animation: rotate-center 2s ease forwards infinite;
 }
 
-.circle:nth-child(1){
+.circle:nth-child(1) {
     left: -30px;
     transform-origin: center;
     animation: slideleft 2s ease forwards infinite;
 }
 
-.circle:nth-child(3){
+.circle:nth-child(3) {
     left: 30px;
     transform-origin: center;
     animation: slideright 2s ease forwards infinite;
@@ -352,126 +536,89 @@ Cadastro
     padding: 0;
 }
 
-/* .input-bar {
-    display: flex;
-    align-items: center;
-} */
-
-.rightside-cadastro label {
-    display: block;
-    color: #FFF;
-    text-shadow: 1px 1px #222;
-    font-weight: bold;
-    margin: 0 20px 20px 20px;
+.rightside-cadastro .input-group input {
+    border: 1.5px solid #e0e7ef;
+    background: rgba(255, 255, 255, 0.25);
 }
 
-/* .rightside-cadastro .input-bar img {
-    display: inline-block !important;
-    margin-left: -10px !important;
-    width: 20px !important;
-    z-index: 99 !important;
-} */
-
-.rightside-cadastro input {
-    width: 100%;
-    border: 1px solid #999;
-    box-shadow: 1px 1px #333;
-    border-radius: 5px;
-    padding: 8px;
-    font-size: 14px;
-    outline: 0;
-    margin-left: -5px;
+.rightside-cadastro .input-group input:focus {
+    border: 1.5px solid #2D9CDB;
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4px 20px 0 rgba(45, 156, 219, 0.12);
 }
 
-.rightside-cadastro input:focus {
-    border-top: 2px solid #2D9CDB;
-    border-right: 2px solid #2D9CDB;
-    border-left: 2px solid #2D9CDB;
-    border-bottom: 2px solid #2D9CDB;
+.rightside-cadastro .input-group label {
+    background: transparent;
 }
 
-.input-button.btn-cadastro input {
-    display: inline-block;
-    border-radius: 15px;
-    border: 1px solid #333 !important;
-    color: #33363A;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: bold;
-    transition: all .3s;
+.rightside-cadastro .input-group input:focus+label,
+.rightside-cadastro .input-group input:not(:placeholder-shown)+label {
+    background: #2D9CDB;
+    color: #fff;
 }
 
-.input-button.btn-cadastro:hover input {
-    background-color: #FF9C0D;
-    color: #33363A;
-    text-shadow: 1px 1px #ddd;
-    box-shadow: 2px 2px 3px #FFD00B;
-    border: none !important;
+.rightside-cadastro .input-group i {
+    color: #2D9CDB;
 }
 
-.input-button.btn-cadastro:active input {
-    background-color: #00FA6D;
-    color: #FFF;
-    text-shadow: 2px 2px #333;
-    box-shadow: 2px 2px 3px #0A734C;
-    border: none !important;
-}
-
-.input-button.btn-cadastro:hover img {
-    animation: rotate 1s ease;
-    border: 2px solid #FFF;
-    border-radius: 50%;
-}
-
-.input-button.btn-cadastro:active img {
-    animation: scale 1s ease;
-    border: 2px solid #2D9CDB;
-    border-radius: 50%;
+.rightside-cadastro .input-group input:focus~i {
+    color: #FF9C0D;
 }
 
 /********************************
 Cadastro 
 *********************************/
 
-.input-button {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    cursor: pointer;
-}
-
-.input-button img {
-    margin: 0 !important;
-    margin-left: -35px !important;
-    width: 30px !important;
-    transition: transform .7s ease-in-out;
+.input-login {
+    text-align: center;
+    margin-top: 18px;
 }
 
 .input-login p {
-    color: #FFF;
-    text-shadow: 1px 1px #222;
-    margin-left: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #00000033;
+    font-size: 1rem;
+    margin: 0;
+    letter-spacing: 0.02em;
 }
 
 .input-login a {
-    color: #1773db;
-    text-shadow: 1px 1px #333;
-    text-decoration: none;
+    color: #FFD00B;
     font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: color 0.17s, border-bottom 0.19s;
+    position: relative;
 }
 
-.error {
-    font-size: 11px;
-    background-color: #FF0000;
-    color: #FFF;
-    padding: 4px;
-    margin-top: 0px;
-    margin-bottom: -5px;
-    margin-right: 10px;
-    border-radius: 0px 0px 20px 20px;
-    text-align: center;
+.input-login a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background: linear-gradient(90deg, #FF9C0D 20%, #FFD00B 80%);
+    border-radius: 4px;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 0.2s, transform 0.23s;
 }
+
+.input-login a:hover {
+    color: #FF9C0D;
+    border-bottom: 2px solid #FFD00B;
+}
+
+.input-login a:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/********************************
+Responsividade
+*********************************/
 
 @media (max-width: 1200px) {
     .rightside-cadastro {
@@ -488,6 +635,17 @@ Cadastro
 
     .leftside {
         flex: 60%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .poke-slider {
+        height: 320px;
+    }
+
+    .slider-item {
+        height: 270px;
+        min-width: 70vw;
     }
 }
 
@@ -509,9 +667,47 @@ Cadastro
     }
 }
 
+@media (max-width: 800px) {
+    .poke-slider {
+        height: 230px;
+    }
+
+    .slider-item {
+        height: 150px;
+        min-width: 87vw;
+        max-width: 95vw;
+        margin: 0 1vw;
+    }
+
+    .slider-controls {
+        width: 98%;
+    }
+
+    .slider-control {
+        width: 38px;
+        height: 38px;
+    }
+
+    .slider-control i {
+        font-size: 1.2rem;
+    }
+
+    .slider-indicators {
+        margin-top: 18px;
+    }
+}
+
 @media (max-width: 768px) {
     .leftside {
         display: none;
+    }
+
+    .input-group {
+        margin: 24px 8px 28px 8px;
+    }
+
+    .input-button {
+        padding: 0px 8px 0px 8px;
     }
 
     .rightside-load,
