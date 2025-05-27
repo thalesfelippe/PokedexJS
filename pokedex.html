@@ -44,12 +44,23 @@
                                     <i class="fas fa-battery-half"></i>
                                 </div>
                                     <div class="display-pokemon hide">
-                                        <img src="" class="poke-image" alt="front">
+                                        <img src="https://via.placeholder.com/80x80?text=Pokémon" class="poke-image" alt="front" id="poke-image">
                                         <span class="poke-name"></span>
                                     </div>
-                                </i></div>
+                                </div>
                             <div class="display-bottom">
                                 <div class="display-bigdots"></div>
+                                <div class="autocomplete-search">
+                                    <input 
+                                        type="text"
+                                        id="poke-name-input"
+                                        class="poke-name-input"
+                                        placeholder="Buscar Pokémon"
+                                        autocomplete="off"
+                                        aria-label="Buscar Pokémon"
+                                    />
+                                    <ul class="autocomplete-list" id="autocomplete-list"></ul>
+                                </div>
                                 <div class="display-lines"><i class="fas fa-align-justify"></i></div>
                             </div>
                         </div>
@@ -64,7 +75,14 @@
                             <div class="black-bar"></div>
                         </div>
                         <div class="bottom-screen">
-                            <span class="poke-id"></span>
+                            <input 
+                                type="text" 
+                                id="poke-id-input" 
+                                class="poke-id-input"
+                                placeholder="Nº"
+                                autocomplete="off"
+                                aria-label="ID do Pokémon"
+                            />
                         </div>
                     </div>
                     <div class="bottom-controls">
